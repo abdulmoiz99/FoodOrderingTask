@@ -22,6 +22,12 @@ namespace FoodOrderingTask.DashBoard
         {
             String Username = SQL.ScalarQuery("Select L_Username from login where L_Id = " + Main.UserID + "");
             lab_Username.Text =  Username.ToUpper();
+            String Role = SQL.ScalarQuery("Select L_Role from Login Where L_Id =" + Main.UserID + "");
+            if (Role == "1")
+            {
+                lab_Role.Text = "Customer";
+            }
+            else lab_Role.Text = "Chef";
         }
     }
 }

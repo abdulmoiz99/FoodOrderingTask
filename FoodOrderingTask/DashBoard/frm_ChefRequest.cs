@@ -15,7 +15,6 @@ namespace FoodOrderingTask.DashBoard
         public frm_ChefRequest()
         {
             InitializeComponent();
-            Main.UserID = 1;
         }
         public bool CheckUserID()
         {

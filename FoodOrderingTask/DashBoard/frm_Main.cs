@@ -114,13 +114,14 @@ namespace FoodOrderingTask.DashBoard
 
         private void btn_Chef_Click(object sender, EventArgs e)
         {
-           // Main.UserID = 2;
             if(Main.CheckCheffApplication(Main.UserID)==true)
             {
                 MessageBox.Show("You Have Already Apply For Cheff Role", "Application Submitted", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else if(Main.IsChef(Main.UserID)==true)
             {
+                SidePanel.Height = btn_Chef.Height;
+                SidePanel.Top = btn_Chef.Top;
                 var frm = new frm_UpdateMenu();
                 frm.MdiParent = this;
                 frm.Dock = DockStyle.Fill;

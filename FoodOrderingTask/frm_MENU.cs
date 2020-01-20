@@ -39,8 +39,11 @@ namespace FoodOrderingTask
             dgv_FoodList.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
             foreach (DataGridViewRow row in dgv_FoodList.Rows)
             {
-                row.Height = 40;
+                //row.Height = 40;
             }
+            dgv_FoodList.RowTemplate.Height = 150;
+
+
             // End of Code 
         }
         /// <summary>
@@ -52,17 +55,17 @@ namespace FoodOrderingTask
         {
             if (rb_Asian.Checked == true)
             {
-                Main.fillDgv(dgv_FoodList, "select M_Name,M_Price,M_Type from Menu where M_Type= 'ASIAN' and CAST(M_Name as varchar) like '%" + txt_Find.Text + "%'");
+                Main.fillDgv(dgv_FoodList, "select M_Name,M_Price,M_Type,M_Image from Menu where M_Type= 'ASIAN' and CAST(M_Name as varchar) like '%" + txt_Find.Text + "%'");
 
             }
             else if (rb_Eastern.Checked == true)
             {
-                Main.fillDgv(dgv_FoodList, "select M_Name,M_Price,M_Type from Menu where M_Type= 'EASTERN' and CAST(M_Name as varchar) like '%" + txt_Find.Text + "%'");
+                Main.fillDgv(dgv_FoodList, "select M_Name,M_Price,M_Type,M_Image from Menu where M_Type= 'EASTERN' and CAST(M_Name as varchar) like '%" + txt_Find.Text + "%'");
 
             }
             else if (rb_Western.Checked == true)
             {
-                Main.fillDgv(dgv_FoodList, "select M_Name,M_Price,M_Type from Menu where M_Type= 'WESTERN' and CAST(M_Name as varchar) like '%" + txt_Find.Text + "%'");
+                Main.fillDgv(dgv_FoodList, "select M_Name,M_Price,M_Type,M_Image from Menu where M_Type= 'WESTERN' and CAST(M_Name as varchar) like '%" + txt_Find.Text + "%'");
 
             }
         }
@@ -88,6 +91,7 @@ namespace FoodOrderingTask
         private void frm_MENU_Load(object sender, EventArgs e)
         {
             txt_Find_TextChanged(sender, e);
+            dgv_FoodList.RowTemplate.Height = 150;
 
         }
 
@@ -129,5 +133,9 @@ namespace FoodOrderingTask
             }
         }
 
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

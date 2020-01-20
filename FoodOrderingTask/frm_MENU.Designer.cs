@@ -28,17 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_MENU));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_MENU));
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.rb_Asian = new System.Windows.Forms.RadioButton();
             this.rb_Eastern = new System.Windows.Forms.RadioButton();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.rb_Western = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -54,35 +51,28 @@
             this.lab_Name1 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.btn_AddToCart = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btn_AddToCart = new System.Windows.Forms.Button();
             this.M_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.M_price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.M_Type = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Image = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.Image = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_FoodList)).BeginInit();
             this.panel5.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(201, 36);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(143, 142);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox3.TabIndex = 4;
-            this.pictureBox3.TabStop = false;
             // 
             // panel2
             // 
@@ -98,16 +88,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(514, 199);
             this.panel2.TabIndex = 17;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(364, 36);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(143, 142);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
             // 
             // rb_Asian
             // 
@@ -136,16 +116,6 @@
             this.rb_Eastern.Text = "MiddleEast";
             this.rb_Eastern.UseVisualStyleBackColor = true;
             this.rb_Eastern.CheckedChanged += new System.EventHandler(this.rb_Eastern_CheckedChanged);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(37, 36);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(143, 142);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox2.TabIndex = 3;
-            this.pictureBox2.TabStop = false;
             // 
             // rb_Western
             // 
@@ -356,23 +326,6 @@
             this.label2.TabIndex = 1022;
             this.label2.Text = "Selected";
             // 
-            // btn_AddToCart
-            // 
-            this.btn_AddToCart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(73)))), ((int)(((byte)(93)))));
-            this.btn_AddToCart.FlatAppearance.BorderSize = 0;
-            this.btn_AddToCart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_AddToCart.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_AddToCart.ForeColor = System.Drawing.Color.White;
-            this.btn_AddToCart.Image = ((System.Drawing.Image)(resources.GetObject("btn_AddToCart.Image")));
-            this.btn_AddToCart.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_AddToCart.Location = new System.Drawing.Point(556, 243);
-            this.btn_AddToCart.Name = "btn_AddToCart";
-            this.btn_AddToCart.Size = new System.Drawing.Size(329, 60);
-            this.btn_AddToCart.TabIndex = 1026;
-            this.btn_AddToCart.Text = "ADD TO CART";
-            this.btn_AddToCart.UseVisualStyleBackColor = false;
-            this.btn_AddToCart.Click += new System.EventHandler(this.btn_AddToCart_Click);
-            // 
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(73)))), ((int)(((byte)(93)))));
@@ -407,6 +360,54 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(964, 633);
             this.panel3.TabIndex = 1029;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(364, 36);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(143, 142);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(201, 36);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(143, 142);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox3.TabIndex = 4;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(37, 36);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(143, 142);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox2.TabIndex = 3;
+            this.pictureBox2.TabStop = false;
+            // 
+            // btn_AddToCart
+            // 
+            this.btn_AddToCart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(73)))), ((int)(((byte)(93)))));
+            this.btn_AddToCart.FlatAppearance.BorderSize = 0;
+            this.btn_AddToCart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_AddToCart.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_AddToCart.ForeColor = System.Drawing.Color.White;
+            this.btn_AddToCart.Image = ((System.Drawing.Image)(resources.GetObject("btn_AddToCart.Image")));
+            this.btn_AddToCart.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_AddToCart.Location = new System.Drawing.Point(556, 243);
+            this.btn_AddToCart.Name = "btn_AddToCart";
+            this.btn_AddToCart.Size = new System.Drawing.Size(329, 60);
+            this.btn_AddToCart.TabIndex = 1026;
+            this.btn_AddToCart.Text = "ADD TO CART";
+            this.btn_AddToCart.UseVisualStyleBackColor = false;
+            this.btn_AddToCart.Click += new System.EventHandler(this.btn_AddToCart_Click);
             // 
             // M_Name
             // 
@@ -435,9 +436,12 @@
             // 
             // Image
             // 
+            this.Image.DataPropertyName = "M_Image";
             this.Image.HeaderText = "Image";
             this.Image.Name = "Image";
             this.Image.ReadOnly = true;
+            this.Image.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Image.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.Image.Width = 250;
             // 
             // frm_MENU
@@ -453,11 +457,8 @@
             this.Text = "frm_MENU";
             this.Activated += new System.EventHandler(this.frm_MENU_Activated);
             this.Load += new System.EventHandler(this.frm_MENU_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_FoodList)).EndInit();
@@ -468,6 +469,9 @@
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
             this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -501,6 +505,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn M_Name;
         private System.Windows.Forms.DataGridViewTextBoxColumn M_price;
         private System.Windows.Forms.DataGridViewTextBoxColumn M_Type;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Image;
+        private System.Windows.Forms.DataGridViewImageColumn Image;
     }
 }

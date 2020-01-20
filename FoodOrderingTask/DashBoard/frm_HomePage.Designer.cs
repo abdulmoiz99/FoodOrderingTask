@@ -31,6 +31,7 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.lab_Username = new System.Windows.Forms.Label();
+            this.lab_Role = new System.Windows.Forms.Label();
             this.panel8.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -68,12 +69,26 @@
             this.lab_Username.Text = "Username";
             this.lab_Username.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // lab_Role
+            // 
+            this.lab_Role.AutoSize = true;
+            this.lab_Role.BackColor = System.Drawing.Color.Transparent;
+            this.lab_Role.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lab_Role.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(73)))), ((int)(((byte)(93)))));
+            this.lab_Role.Location = new System.Drawing.Point(30, 157);
+            this.lab_Role.Name = "lab_Role";
+            this.lab_Role.Size = new System.Drawing.Size(103, 23);
+            this.lab_Role.TabIndex = 1030;
+            this.lab_Role.Text = "Username";
+            this.lab_Role.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // frm_HomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(934, 573);
+            this.Controls.Add(this.lab_Role);
             this.Controls.Add(this.lab_Username);
             this.Controls.Add(this.panel8);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -92,5 +107,6 @@
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lab_Username;
+        private System.Windows.Forms.Label lab_Role;
     }
 }
