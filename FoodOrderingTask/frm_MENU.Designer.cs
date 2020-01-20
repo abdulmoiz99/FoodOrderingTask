@@ -46,9 +46,6 @@
             this.button2 = new System.Windows.Forms.Button();
             this.txt_Find = new System.Windows.Forms.TextBox();
             this.dgv_FoodList = new System.Windows.Forms.DataGridView();
-            this.M_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.M_price = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.M_Type = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel5 = new System.Windows.Forms.Panel();
             this.lab_Price = new System.Windows.Forms.Label();
             this.lab_Price1 = new System.Windows.Forms.Label();
@@ -61,6 +58,10 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.M_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.M_price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.M_Type = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Image = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -76,7 +77,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(322, 36);
+            this.pictureBox3.Location = new System.Drawing.Point(201, 36);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(143, 142);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -95,13 +96,13 @@
             this.panel2.Location = new System.Drawing.Point(36, 15);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(774, 199);
+            this.panel2.Size = new System.Drawing.Size(514, 199);
             this.panel2.TabIndex = 17;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(604, 36);
+            this.pictureBox1.Location = new System.Drawing.Point(364, 36);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(143, 142);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -113,7 +114,7 @@
             this.rb_Asian.AutoSize = true;
             this.rb_Asian.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rb_Asian.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(73)))), ((int)(((byte)(93)))));
-            this.rb_Asian.Location = new System.Drawing.Point(604, 3);
+            this.rb_Asian.Location = new System.Drawing.Point(364, 3);
             this.rb_Asian.Name = "rb_Asian";
             this.rb_Asian.Size = new System.Drawing.Size(79, 27);
             this.rb_Asian.TabIndex = 12;
@@ -127,7 +128,7 @@
             this.rb_Eastern.AutoSize = true;
             this.rb_Eastern.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rb_Eastern.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(73)))), ((int)(((byte)(93)))));
-            this.rb_Eastern.Location = new System.Drawing.Point(322, 3);
+            this.rb_Eastern.Location = new System.Drawing.Point(201, 3);
             this.rb_Eastern.Name = "rb_Eastern";
             this.rb_Eastern.Size = new System.Drawing.Size(130, 27);
             this.rb_Eastern.TabIndex = 12;
@@ -169,7 +170,7 @@
             this.groupBox1.Controls.Add(this.txt_Find);
             this.groupBox1.Location = new System.Drawing.Point(36, 219);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(774, 100);
+            this.groupBox1.Size = new System.Drawing.Size(514, 100);
             this.groupBox1.TabIndex = 1020;
             this.groupBox1.TabStop = false;
             // 
@@ -178,7 +179,7 @@
             this.panel4.BackColor = System.Drawing.Color.DimGray;
             this.panel4.Location = new System.Drawing.Point(21, 80);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(560, 4);
+            this.panel4.Size = new System.Drawing.Size(356, 4);
             this.panel4.TabIndex = 1020;
             // 
             // label1
@@ -199,9 +200,9 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(586, 45);
+            this.button2.Location = new System.Drawing.Point(384, 40);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(182, 39);
+            this.button2.Size = new System.Drawing.Size(123, 39);
             this.button2.TabIndex = 1;
             this.button2.Text = "FIND FOOD";
             this.button2.UseVisualStyleBackColor = false;
@@ -212,7 +213,7 @@
             this.txt_Find.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Find.Location = new System.Drawing.Point(21, 45);
             this.txt_Find.Name = "txt_Find";
-            this.txt_Find.Size = new System.Drawing.Size(560, 26);
+            this.txt_Find.Size = new System.Drawing.Size(356, 26);
             this.txt_Find.TabIndex = 0;
             this.txt_Find.TextChanged += new System.EventHandler(this.txt_Find_TextChanged);
             // 
@@ -235,7 +236,8 @@
             this.dgv_FoodList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.M_Name,
             this.M_price,
-            this.M_Type});
+            this.M_Type,
+            this.Image});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -244,7 +246,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgv_FoodList.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgv_FoodList.Location = new System.Drawing.Point(36, 407);
+            this.dgv_FoodList.Location = new System.Drawing.Point(57, 334);
             this.dgv_FoodList.Name = "dgv_FoodList";
             this.dgv_FoodList.ReadOnly = true;
             this.dgv_FoodList.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
@@ -261,33 +263,9 @@
             this.dgv_FoodList.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgv_FoodList.RowTemplate.Height = 50;
             this.dgv_FoodList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_FoodList.Size = new System.Drawing.Size(394, 270);
+            this.dgv_FoodList.Size = new System.Drawing.Size(828, 270);
             this.dgv_FoodList.TabIndex = 1021;
             this.dgv_FoodList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_FoodList_CellContentClick);
-            // 
-            // M_Name
-            // 
-            this.M_Name.DataPropertyName = "M_Name";
-            this.M_Name.HeaderText = "MENU";
-            this.M_Name.Name = "M_Name";
-            this.M_Name.ReadOnly = true;
-            this.M_Name.Width = 365;
-            // 
-            // M_price
-            // 
-            this.M_price.DataPropertyName = "M_price";
-            this.M_price.HeaderText = "Price";
-            this.M_price.Name = "M_price";
-            this.M_price.ReadOnly = true;
-            this.M_price.Visible = false;
-            // 
-            // M_Type
-            // 
-            this.M_Type.DataPropertyName = "M_Type";
-            this.M_Type.HeaderText = "M_Type";
-            this.M_Type.Name = "M_Type";
-            this.M_Type.ReadOnly = true;
-            this.M_Type.Visible = false;
             // 
             // panel5
             // 
@@ -297,9 +275,9 @@
             this.panel5.Controls.Add(this.panel6);
             this.panel5.Controls.Add(this.lab_Name);
             this.panel5.Controls.Add(this.lab_Name1);
-            this.panel5.Location = new System.Drawing.Point(437, 388);
+            this.panel5.Location = new System.Drawing.Point(555, 66);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(373, 148);
+            this.panel5.Size = new System.Drawing.Size(330, 148);
             this.panel5.TabIndex = 1025;
             // 
             // lab_Price
@@ -362,9 +340,9 @@
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(73)))), ((int)(((byte)(93)))));
             this.panel7.Controls.Add(this.label2);
-            this.panel7.Location = new System.Drawing.Point(436, 325);
+            this.panel7.Location = new System.Drawing.Point(554, 3);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(374, 65);
+            this.panel7.Size = new System.Drawing.Size(331, 65);
             this.panel7.TabIndex = 1024;
             // 
             // label2
@@ -387,9 +365,9 @@
             this.btn_AddToCart.ForeColor = System.Drawing.Color.White;
             this.btn_AddToCart.Image = ((System.Drawing.Image)(resources.GetObject("btn_AddToCart.Image")));
             this.btn_AddToCart.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_AddToCart.Location = new System.Drawing.Point(437, 542);
+            this.btn_AddToCart.Location = new System.Drawing.Point(556, 243);
             this.btn_AddToCart.Name = "btn_AddToCart";
-            this.btn_AddToCart.Size = new System.Drawing.Size(373, 53);
+            this.btn_AddToCart.Size = new System.Drawing.Size(329, 60);
             this.btn_AddToCart.TabIndex = 1026;
             this.btn_AddToCart.Text = "ADD TO CART";
             this.btn_AddToCart.UseVisualStyleBackColor = false;
@@ -402,7 +380,7 @@
             this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel8.Location = new System.Drawing.Point(0, 0);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(928, 82);
+            this.panel8.Size = new System.Drawing.Size(984, 82);
             this.panel8.TabIndex = 1027;
             // 
             // label5
@@ -418,6 +396,7 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.dgv_FoodList);
             this.panel3.Controls.Add(this.panel5);
             this.panel3.Controls.Add(this.panel2);
             this.panel3.Controls.Add(this.groupBox1);
@@ -426,16 +405,47 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(0, 82);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(889, 633);
+            this.panel3.Size = new System.Drawing.Size(964, 633);
             this.panel3.TabIndex = 1029;
+            // 
+            // M_Name
+            // 
+            this.M_Name.DataPropertyName = "M_Name";
+            this.M_Name.HeaderText = "MENU";
+            this.M_Name.Name = "M_Name";
+            this.M_Name.ReadOnly = true;
+            this.M_Name.Width = 365;
+            // 
+            // M_price
+            // 
+            this.M_price.DataPropertyName = "M_price";
+            this.M_price.HeaderText = "Price";
+            this.M_price.Name = "M_price";
+            this.M_price.ReadOnly = true;
+            this.M_price.Width = 200;
+            // 
+            // M_Type
+            // 
+            this.M_Type.DataPropertyName = "M_Type";
+            this.M_Type.HeaderText = "M_Type";
+            this.M_Type.Name = "M_Type";
+            this.M_Type.ReadOnly = true;
+            this.M_Type.Visible = false;
+            this.M_Type.Width = 200;
+            // 
+            // Image
+            // 
+            this.Image.HeaderText = "Image";
+            this.Image.Name = "Image";
+            this.Image.ReadOnly = true;
+            this.Image.Width = 250;
             // 
             // frm_MENU
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(928, 715);
-            this.Controls.Add(this.dgv_FoodList);
+            this.ClientSize = new System.Drawing.Size(984, 715);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel8);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -491,5 +501,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn M_Name;
         private System.Windows.Forms.DataGridViewTextBoxColumn M_price;
         private System.Windows.Forms.DataGridViewTextBoxColumn M_Type;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Image;
     }
 }
