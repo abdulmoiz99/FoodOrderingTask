@@ -150,5 +150,21 @@ namespace FoodOrderingTask
                 MessageBox.Show(ex.Message, "Data Grid View");
             }
         }
+        public static bool CheckCheffApplication(int ID)
+        {
+            string Compare = "";
+            Compare = SQL.ScalarQuery("SELECT CASE WHEN EXISTS (SELECT TOP 1 * FROM ChefRequest  WHERE CR_UserID = " + ID + " and CR_Status = 'PENDING') THEN CAST (1 AS BIT) ELSE CAST (0 AS BIT) END");
+            if (string.Compare("True", Compare) == 0) return true;
+            else return false;
+        }
+
+        public static bool IsChef(int ID)
+        {
+            string Compare = "";
+            Compare = SQL.ScalarQuery("SELECT CASE WHEN EXISTS (SELECT TOP 1 * FROM Login  WHERE L_ID = " + ID + " and L_Role = 2) THEN CAST (1 AS BIT) ELSE CAST (0 AS BIT) END");
+            if (string.Compare("True", Compare) == 0) return true;
+            else return false;
+        }
+
     }
 }

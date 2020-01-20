@@ -126,7 +126,7 @@
             this.txt_Password.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(73)))), ((int)(((byte)(93)))));
             this.txt_Password.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_Password.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Password.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.txt_Password.ForeColor = System.Drawing.Color.White;
             this.txt_Password.Location = new System.Drawing.Point(27, 432);
             this.txt_Password.Name = "txt_Password";
             this.txt_Password.Size = new System.Drawing.Size(231, 19);
@@ -148,7 +148,7 @@
             this.txt_Username.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(73)))), ((int)(((byte)(93)))));
             this.txt_Username.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_Username.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Username.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.txt_Username.ForeColor = System.Drawing.Color.White;
             this.txt_Username.Location = new System.Drawing.Point(30, 340);
             this.txt_Username.Name = "txt_Username";
             this.txt_Username.Size = new System.Drawing.Size(228, 19);

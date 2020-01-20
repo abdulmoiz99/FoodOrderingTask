@@ -144,7 +144,7 @@ namespace FoodOrderingTask.DashBoard
         {
             if(Main.UserName=="admin")
             {
-                var frm = new ChefRequestUpdater();
+                var frm = new frm_ChefRequestUpdater();
                 frm.MdiParent = this;
                 frm.Dock = DockStyle.Fill;
                 frm.Show();

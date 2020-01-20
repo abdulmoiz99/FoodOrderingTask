@@ -52,6 +52,12 @@
     <Compile Include="DashBoard\frm_ChefRequest.Designer.cs">
       <DependentUpon>frm_ChefRequest.cs</DependentUpon>
     </Compile>
+    <Compile Include="DashBoard\frm_ChefRequestUpdater.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DashBoard\frm_ChefRequestUpdater.Designer.cs">
+      <DependentUpon>frm_ChefRequestUpdater.cs</DependentUpon>
+    </Compile>
     <Compile Include="DashBoard\frm_HomePage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,6 +118,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="DashBoard\frm_ChefRequest.resx">
       <DependentUpon>frm_ChefRequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DashBoard\frm_ChefRequestUpdater.resx">
+      <DependentUpon>frm_ChefRequestUpdater.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DashBoard\frm_HomePage.resx">
       <DependentUpon>frm_HomePage.cs</DependentUpon>

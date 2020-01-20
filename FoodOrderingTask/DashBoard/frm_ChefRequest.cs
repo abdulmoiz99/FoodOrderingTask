@@ -40,8 +40,8 @@ namespace FoodOrderingTask.DashBoard
                 {
                     SQL.NonScalarQuery(@"Insert Into ChefRequest(CR_UserID          ,CR_Username            ,CR_Application        ,CR_Status,CR_Active)
                                                           values(" + Main.UserID + ",'" + Main.UserName + "','" + txt_Why.Text + "','PENDING' ,1)");
-                    MessageBox.Show("Your Request Is Submitted Successfull.You Will Be Notify Shortly", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
+                    MessageBox.Show("Your Request Is Submitted Successfull.You Will Be Notify Shortly", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
         }
