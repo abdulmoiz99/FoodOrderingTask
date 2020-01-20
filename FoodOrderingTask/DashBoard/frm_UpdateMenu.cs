@@ -31,7 +31,7 @@ namespace FoodOrderingTask.DashBoard
             OFD.Filter = "Bitmaps|*.bmp|jpeps|*.jpg";
             if (OFD.ShowDialog() == DialogResult.OK)
             {
-            //    pb_FoodImage.Image = Image.FromFile(OFD.FileName);
+                //    pb_FoodImage.Image = Image.FromFile(OFD.FileName);
                 pb_FoodImage.SizeMode = PictureBoxSizeMode.StretchImage;
             }
         }
@@ -66,6 +66,14 @@ namespace FoodOrderingTask.DashBoard
         private void btn_Save_Click(object sender, EventArgs e)
         {
             String Type = "ASIAN";
+            if (rb_Eastern.Checked == true)
+            {
+                Type = "EASTERN";
+            }
+            else if (rb_Western.Checked == true)
+            {
+                Type = "WESTERN";
+            }
             if (txt_ItemName.Text == "")
             {
                 MessageBox.Show("Please Enter Item Name", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -86,11 +94,11 @@ namespace FoodOrderingTask.DashBoard
                         SQL.Con.Close();
                     }
                     SQL.Con.Open();
-                    String Query =@"Insert Into Menu  (            M_Name         ,M_Price                ,M_Type         ,M_Image,M_Active) values 
+                    String Query = @"Insert Into Menu  (            M_Name         ,M_Price                ,M_Type         ,M_Image,M_Active) values 
                                                            ('" + txt_ItemName.Text + "','" + txt_Price.Text + "','" + Type + "',@pic    ,1  )";
 
                     SqlCommand cmd = new SqlCommand(Query, SQL.Con);
-                 //   SQL.Con.cmd.Connection = cc.con;
+                    //   SQL.Con.cmd.Connection = cc.con;
                     var ms2 = new MemoryStream();
                     pb_FoodImage.Image.Save(ms2, pb_FoodImage.Image.RawFormat);
                     byte[] data2 = ms2.GetBuffer();
@@ -165,32 +173,32 @@ namespace FoodOrderingTask.DashBoard
 
         private void frm_UpdateMenu_Activated(object sender, EventArgs e)
         {
-           Main.fillDgv(dgv_FoodList, "select M_Name,M_Price,M_Type,M_Image from MEnu");
+            Main.fillDgv(dgv_FoodList, "select M_ID,M_Name,M_Price,M_Type,M_Image from MEnu");
 
         }
 
         private void dgv_FoodList_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            try
-            {
+            //try
+            //{
 
-                int index = e.RowIndex;
-                if (index > -1)
-                {
-                    txt_DataGridViewIndex.Text = index.ToString();
-                    DataGridViewRow selectedrow = dgv_FoodList.Rows[index];
-                    txt_DataGridViewIndex.Text = selectedrow.Cells["M_ID"].Value.ToString();
-                    txt_ItemName.Text = selectedrow.Cells["M_Name"].Value.ToString();
-                    txt_Price.Text = selectedrow.Cells["M_Price"].Value.ToString();
-                    //  pb_FoodImage.Image =Convert.Tma selectedrow.Cells["M_Image"].Value.ToString();
-
-                }
-                index = 0;
-            }
-            catch (Exception ex)
+            int index = e.RowIndex;
+            if (index > -1)
             {
-                MessageBox.Show(ex.Message);
+                txt_DataGridViewIndex.Text = index.ToString();
+                DataGridViewRow selectedrow = dgv_FoodList.Rows[index];
+                txt_DataGridViewIndex.Text = selectedrow.Cells["M_ID"].Value.ToString();
+                txt_ItemName.Text = selectedrow.Cells["M_Name"].Value.ToString();
+                txt_Price.Text = selectedrow.Cells["M_Price"].Value.ToString();
+                //  pb_FoodImage.Image =Convert.Tma selectedrow.Cells["M_Image"].Value.ToString();
+
             }
+            index = 0;
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.Message);
+            //}
         }
 
         private void btn_Upload_Click(object sender, EventArgs e)

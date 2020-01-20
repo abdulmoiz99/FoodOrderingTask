@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_UpdateMenu));
             this.panel8 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
@@ -42,7 +42,7 @@
             this.txt_ItemName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.rb_Cash = new System.Windows.Forms.RadioButton();
+            this.rb_Asian = new System.Windows.Forms.RadioButton();
             this.rb_Eastern = new System.Windows.Forms.RadioButton();
             this.rb_Western = new System.Windows.Forms.RadioButton();
             this.dgv_FoodList = new System.Windows.Forms.DataGridView();
@@ -50,9 +50,6 @@
             this.btn_Save = new System.Windows.Forms.Button();
             this.btn_cancel = new System.Windows.Forms.Button();
             this.btn_Delete = new System.Windows.Forms.Button();
-            this.btn_New = new System.Windows.Forms.Button();
-            this.pb_FoodImage = new System.Windows.Forms.PictureBox();
-            this.btn_edit = new System.Windows.Forms.Button();
             this.txt_DataGridViewIndex = new System.Windows.Forms.TextBox();
             this.M_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.M_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -60,6 +57,9 @@
             this.M_Type = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Image = new System.Windows.Forms.DataGridViewImageColumn();
             this.btn_Upload = new System.Windows.Forms.Button();
+            this.pb_FoodImage = new System.Windows.Forms.PictureBox();
+            this.btn_edit = new System.Windows.Forms.Button();
+            this.btn_New = new System.Windows.Forms.Button();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_FoodList)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -107,6 +107,7 @@
             // 
             this.txt_Price.BackColor = System.Drawing.Color.White;
             this.txt_Price.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_Price.Enabled = false;
             this.txt_Price.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Price.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(99)))), ((int)(((byte)(99)))));
             this.txt_Price.Location = new System.Drawing.Point(198, 190);
@@ -129,6 +130,7 @@
             // 
             this.txt_ItemName.BackColor = System.Drawing.Color.White;
             this.txt_ItemName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_ItemName.Enabled = false;
             this.txt_ItemName.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_ItemName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(99)))), ((int)(((byte)(99)))));
             this.txt_ItemName.Location = new System.Drawing.Point(198, 127);
@@ -158,20 +160,20 @@
             this.label4.TabIndex = 1045;
             this.label4.Text = "Item Name :";
             // 
-            // rb_Cash
+            // rb_Asian
             // 
-            this.rb_Cash.AutoSize = true;
-            this.rb_Cash.Checked = true;
-            this.rb_Cash.FlatAppearance.CheckedBackColor = System.Drawing.Color.Gray;
-            this.rb_Cash.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rb_Cash.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(99)))), ((int)(((byte)(99)))));
-            this.rb_Cash.Location = new System.Drawing.Point(180, 255);
-            this.rb_Cash.Name = "rb_Cash";
-            this.rb_Cash.Size = new System.Drawing.Size(101, 29);
-            this.rb_Cash.TabIndex = 1053;
-            this.rb_Cash.TabStop = true;
-            this.rb_Cash.Text = "ASIAN ";
-            this.rb_Cash.UseVisualStyleBackColor = true;
+            this.rb_Asian.AutoSize = true;
+            this.rb_Asian.Checked = true;
+            this.rb_Asian.FlatAppearance.CheckedBackColor = System.Drawing.Color.Gray;
+            this.rb_Asian.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rb_Asian.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(99)))), ((int)(((byte)(99)))));
+            this.rb_Asian.Location = new System.Drawing.Point(180, 255);
+            this.rb_Asian.Name = "rb_Asian";
+            this.rb_Asian.Size = new System.Drawing.Size(101, 29);
+            this.rb_Asian.TabIndex = 1053;
+            this.rb_Asian.TabStop = true;
+            this.rb_Asian.Text = "ASIAN ";
+            this.rb_Asian.UseVisualStyleBackColor = true;
             // 
             // rb_Eastern
             // 
@@ -206,14 +208,14 @@
             this.dgv_FoodList.AllowUserToOrderColumns = true;
             this.dgv_FoodList.BackgroundColor = System.Drawing.Color.White;
             this.dgv_FoodList.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedVertical;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(99)))), ((int)(((byte)(99)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_FoodList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(99)))), ((int)(((byte)(99)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_FoodList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_FoodList.ColumnHeadersHeight = 50;
             this.dgv_FoodList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.M_ID,
@@ -221,29 +223,29 @@
             this.M_price,
             this.M_Type,
             this.Image});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_FoodList.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_FoodList.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_FoodList.Location = new System.Drawing.Point(22, 394);
             this.dgv_FoodList.Name = "dgv_FoodList";
             this.dgv_FoodList.ReadOnly = true;
             this.dgv_FoodList.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_FoodList.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_FoodList.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_FoodList.RowHeadersWidth = 10;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
-            this.dgv_FoodList.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.dgv_FoodList.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgv_FoodList.RowTemplate.Height = 50;
             this.dgv_FoodList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_FoodList.Size = new System.Drawing.Size(844, 270);
@@ -271,6 +273,7 @@
             this.btn_Save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Save.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Save.ForeColor = System.Drawing.Color.White;
+            this.btn_Save.Image = global::FoodOrderingTask.Properties.Resources.icons8_save_30;
             this.btn_Save.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Save.Location = new System.Drawing.Point(8, 134);
             this.btn_Save.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
@@ -290,6 +293,7 @@
             this.btn_cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_cancel.ForeColor = System.Drawing.Color.White;
+            this.btn_cancel.Image = global::FoodOrderingTask.Properties.Resources.icons8_undo_30;
             this.btn_cancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_cancel.Location = new System.Drawing.Point(8, 246);
             this.btn_cancel.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
@@ -309,6 +313,7 @@
             this.btn_Delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Delete.ForeColor = System.Drawing.Color.White;
+            this.btn_Delete.Image = global::FoodOrderingTask.Properties.Resources.icons8_delete_bin_30;
             this.btn_Delete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Delete.Location = new System.Drawing.Point(8, 190);
             this.btn_Delete.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
@@ -319,54 +324,6 @@
             this.btn_Delete.Text = "  &Delete";
             this.btn_Delete.UseVisualStyleBackColor = false;
             this.btn_Delete.Click += new System.EventHandler(this.btn_Delete_Click);
-            // 
-            // btn_New
-            // 
-            this.btn_New.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(174)))), ((int)(((byte)(174)))));
-            this.btn_New.FlatAppearance.BorderSize = 0;
-            this.btn_New.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_New.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_New.ForeColor = System.Drawing.Color.White;
-            this.btn_New.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_New.Location = new System.Drawing.Point(8, 22);
-            this.btn_New.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.btn_New.Name = "btn_New";
-            this.btn_New.Size = new System.Drawing.Size(172, 43);
-            this.btn_New.TabIndex = 127;
-            this.btn_New.TabStop = false;
-            this.btn_New.Text = "&New";
-            this.btn_New.UseVisualStyleBackColor = false;
-            this.btn_New.Click += new System.EventHandler(this.btn_New_Click);
-            // 
-            // pb_FoodImage
-            // 
-            this.pb_FoodImage.Image = global::FoodOrderingTask.Properties.Resources.icons8_food_100;
-            this.pb_FoodImage.Location = new System.Drawing.Point(523, 103);
-            this.pb_FoodImage.Name = "pb_FoodImage";
-            this.pb_FoodImage.Size = new System.Drawing.Size(147, 181);
-            this.pb_FoodImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pb_FoodImage.TabIndex = 132;
-            this.pb_FoodImage.TabStop = false;
-            // 
-            // btn_edit
-            // 
-            this.btn_edit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(174)))), ((int)(((byte)(174)))));
-            this.btn_edit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btn_edit.FlatAppearance.BorderSize = 0;
-            this.btn_edit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_edit.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_edit.ForeColor = System.Drawing.Color.White;
-            this.btn_edit.Image = ((System.Drawing.Image)(resources.GetObject("btn_edit.Image")));
-            this.btn_edit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_edit.Location = new System.Drawing.Point(8, 78);
-            this.btn_edit.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.btn_edit.Name = "btn_edit";
-            this.btn_edit.Size = new System.Drawing.Size(172, 43);
-            this.btn_edit.TabIndex = 128;
-            this.btn_edit.TabStop = false;
-            this.btn_edit.Text = "  &Edit";
-            this.btn_edit.UseVisualStyleBackColor = false;
-            this.btn_edit.Click += new System.EventHandler(this.btn_edit_Click);
             // 
             // txt_DataGridViewIndex
             // 
@@ -440,6 +397,55 @@
             this.btn_Upload.UseVisualStyleBackColor = false;
             this.btn_Upload.Click += new System.EventHandler(this.btn_Upload_Click);
             // 
+            // pb_FoodImage
+            // 
+            this.pb_FoodImage.Image = global::FoodOrderingTask.Properties.Resources.icons8_food_100;
+            this.pb_FoodImage.Location = new System.Drawing.Point(523, 103);
+            this.pb_FoodImage.Name = "pb_FoodImage";
+            this.pb_FoodImage.Size = new System.Drawing.Size(147, 181);
+            this.pb_FoodImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pb_FoodImage.TabIndex = 132;
+            this.pb_FoodImage.TabStop = false;
+            // 
+            // btn_edit
+            // 
+            this.btn_edit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(174)))), ((int)(((byte)(174)))));
+            this.btn_edit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btn_edit.FlatAppearance.BorderSize = 0;
+            this.btn_edit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_edit.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_edit.ForeColor = System.Drawing.Color.White;
+            this.btn_edit.Image = ((System.Drawing.Image)(resources.GetObject("btn_edit.Image")));
+            this.btn_edit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_edit.Location = new System.Drawing.Point(8, 78);
+            this.btn_edit.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.btn_edit.Name = "btn_edit";
+            this.btn_edit.Size = new System.Drawing.Size(172, 43);
+            this.btn_edit.TabIndex = 128;
+            this.btn_edit.TabStop = false;
+            this.btn_edit.Text = "  &Edit";
+            this.btn_edit.UseVisualStyleBackColor = false;
+            this.btn_edit.Click += new System.EventHandler(this.btn_edit_Click);
+            // 
+            // btn_New
+            // 
+            this.btn_New.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(174)))), ((int)(((byte)(174)))));
+            this.btn_New.FlatAppearance.BorderSize = 0;
+            this.btn_New.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_New.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_New.ForeColor = System.Drawing.Color.White;
+            this.btn_New.Image = global::FoodOrderingTask.Properties.Resources.icons8_add_folder_30;
+            this.btn_New.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_New.Location = new System.Drawing.Point(8, 22);
+            this.btn_New.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.btn_New.Name = "btn_New";
+            this.btn_New.Size = new System.Drawing.Size(172, 43);
+            this.btn_New.TabIndex = 127;
+            this.btn_New.TabStop = false;
+            this.btn_New.Text = "&New";
+            this.btn_New.UseVisualStyleBackColor = false;
+            this.btn_New.Click += new System.EventHandler(this.btn_New_Click);
+            // 
             // frm_UpdateMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -453,7 +459,7 @@
             this.Controls.Add(this.dgv_FoodList);
             this.Controls.Add(this.rb_Western);
             this.Controls.Add(this.rb_Eastern);
-            this.Controls.Add(this.rb_Cash);
+            this.Controls.Add(this.rb_Asian);
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -489,7 +495,7 @@
         private System.Windows.Forms.TextBox txt_ItemName;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.RadioButton rb_Cash;
+        private System.Windows.Forms.RadioButton rb_Asian;
         private System.Windows.Forms.RadioButton rb_Eastern;
         private System.Windows.Forms.RadioButton rb_Western;
         private System.Windows.Forms.DataGridView dgv_FoodList;

@@ -63,6 +63,26 @@ namespace FoodOrderingTask.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_add_folder_30 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-add-folder-30", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_delete_bin_30 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-delete-bin-30", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_food_100 {
             get {
                 object obj = ResourceManager.GetObject("icons8-food-100", resourceCulture);
@@ -76,6 +96,26 @@ namespace FoodOrderingTask.Properties {
         internal static System.Drawing.Bitmap icons8_food_40 {
             get {
                 object obj = ResourceManager.GetObject("icons8-food-40", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_save_30 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-save-30", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_undo_30 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-undo-30", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
