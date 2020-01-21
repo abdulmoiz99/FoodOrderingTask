@@ -41,7 +41,6 @@ namespace FoodOrderingTask.DashBoard
             mode = 1;
             AllClear();
             btn_edit.Enabled = false;
-            btn_Delete.Enabled = false;
             btn_New.Enabled = false;
             btn_cancel.Enabled = true;
             btn_Save.Enabled = true;
@@ -55,7 +54,6 @@ namespace FoodOrderingTask.DashBoard
             mode = 2;
             btn_edit.Enabled = false;
             btn_New.Enabled = false;
-            btn_Delete.Enabled = false;
             btn_Save.Enabled = true;
             btn_cancel.Enabled = true;
             txt_ItemName.Enabled = true;
@@ -65,6 +63,7 @@ namespace FoodOrderingTask.DashBoard
 
         private void btn_Save_Click(object sender, EventArgs e)
         {
+            float Price;
             String Type = "ASIAN";
             if (rb_Eastern.Checked == true)
             {
@@ -81,6 +80,10 @@ namespace FoodOrderingTask.DashBoard
             else if (txt_Price.Text == "")
             {
                 MessageBox.Show("Please Enter Price ", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (!float.TryParse(txt_Price.Text, out Price))
+            {
+                MessageBox.Show("Price Is Invalid", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else if (mode == 1)
             {
@@ -139,7 +142,6 @@ namespace FoodOrderingTask.DashBoard
         {
             mode = 0;
             btn_edit.Enabled = true;
-            btn_Delete.Enabled = false;
             btn_New.Enabled = true;
             btn_cancel.Enabled = false;
             btn_Save.Enabled = false;

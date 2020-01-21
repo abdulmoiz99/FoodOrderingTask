@@ -143,7 +143,7 @@ namespace FoodOrderingTask.DashBoard
 
         private void btn_ChefRequest_Click(object sender, EventArgs e)
         {
-            if(Main.UserName=="admin")
+            if(Main.UserName.ToUpper()=="ADMIN")
             {
                 var frm = new frm_ChefRequestUpdater();
                 frm.MdiParent = this;

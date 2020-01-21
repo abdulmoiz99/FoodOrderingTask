@@ -71,6 +71,18 @@ namespace FoodOrderingTask.DashBoard
             {
                 MessageBox.Show("Please Enter Username", "", MessageBoxButtons.OK);
             }
+            else if (txt_Email.Text == "")
+            {
+                MessageBox.Show("Please Enter EMail", "", MessageBoxButtons.OK);
+            }
+            else if (txt_Phone.Text == "")
+            {
+                MessageBox.Show("Please Enter Phone No", "", MessageBoxButtons.OK);
+            }
+            else if (txt_Address.Text == "")
+            {
+                MessageBox.Show("Please Enter Address", "", MessageBoxButtons.OK);
+            }
             else if (txt_OldPassword.Text == "")
             {
                 MessageBox.Show("Please Enter Old Password", "", MessageBoxButtons.OK);
@@ -89,15 +101,24 @@ namespace FoodOrderingTask.DashBoard
                 MessageBox.Show("Password is same as old password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
+           
             else
             {
                 DialogResult YorN = MessageBox.Show("Are you sure to update user settings", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (YorN == DialogResult.Yes)
                 {
-                    SQL.NonScalarQuery("Update login set L_Password ='" + txt_NewPassword.Text + "' ,L_username='" + txt_Username.Text + "' where l_ID = "+Main.UserID+"");
+                    SQL.NonScalarQuery("Update login set L_Password ='" + txt_NewPassword.Text + "' ,L_username='" + txt_Username.Text + "',L_PhoneNo = '"+txt_Phone.Text+ "' , L_Email='"+txt_Email.Text+"' , L_Address ='"+txt_Address.Text+"' where l_ID = " + Main.UserID+"");
                     MessageBox.Show("Password Updated Successfull", "Success", MessageBoxButtons.OK);
                     this.Close();
                 }
+            }
+        }
+
+        private void txt_Phone_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
             }
         }
     }
