@@ -87,8 +87,7 @@ namespace FoodOrderingTask.DashBoard
             }
             else if (mode == 1)
             {
-
-
+                
                 DialogResult YesOrNo = MessageBox.Show("Are you sure To INSERT the current Record", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (YesOrNo == DialogResult.Yes)
                 {
@@ -97,8 +96,8 @@ namespace FoodOrderingTask.DashBoard
                         SQL.Con.Close();
                     }
                     SQL.Con.Open();
-                    String Query = @"Insert Into Menu  (            M_Name         ,M_Price                ,M_Type         ,M_Image,M_Active) values 
-                                                           ('" + txt_ItemName.Text + "','" + txt_Price.Text + "','" + Type + "',@pic    ,1  )";
+                    String Query = @"Insert Into Menu  (            M_Name         ,M_Price                ,M_Type         ,M_Image,M_Active,M_ChefName) values 
+                                                           ('" + txt_ItemName.Text + "','" + txt_Price.Text + "','" + Type + "',@pic    ,1,'" + Main.UserName + "' )";
 
                     SqlCommand cmd = new SqlCommand(Query, SQL.Con);
                     //   SQL.Con.cmd.Connection = cc.con;
@@ -113,6 +112,7 @@ namespace FoodOrderingTask.DashBoard
                     frm_UpdateMenu_Load(sender, e);
                     btn_cancel_Click(sender, e);
                     MessageBox.Show("Record Added Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    Main.fillDgv(dgv_FoodList, "select M_ID,M_Name,M_Price,M_Type,M_Image,M_ChefName from MEnu");
                 }
             }
 
@@ -175,7 +175,7 @@ namespace FoodOrderingTask.DashBoard
 
         private void frm_UpdateMenu_Activated(object sender, EventArgs e)
         {
-            Main.fillDgv(dgv_FoodList, "select M_ID,M_Name,M_Price,M_Type,M_Image from MEnu");
+            Main.fillDgv(dgv_FoodList, "select M_ID,M_Name,M_Price,M_Type,M_Image,M_ChefName from MEnu");
 
         }
 

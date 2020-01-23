@@ -46,11 +46,6 @@
             this.rb_Eastern = new System.Windows.Forms.RadioButton();
             this.rb_Western = new System.Windows.Forms.RadioButton();
             this.dgv_FoodList = new System.Windows.Forms.DataGridView();
-            this.M_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.M_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.M_price = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.M_Type = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Image = new System.Windows.Forms.DataGridViewImageColumn();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btn_Save = new System.Windows.Forms.Button();
             this.btn_cancel = new System.Windows.Forms.Button();
@@ -59,6 +54,12 @@
             this.txt_DataGridViewIndex = new System.Windows.Forms.TextBox();
             this.btn_Upload = new System.Windows.Forms.Button();
             this.pb_FoodImage = new System.Windows.Forms.PictureBox();
+            this.M_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.M_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.M_price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.M_Type = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Image = new System.Windows.Forms.DataGridViewImageColumn();
+            this.M_ChefName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_FoodList)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -221,7 +222,8 @@
             this.M_Name,
             this.M_price,
             this.M_Type,
-            this.Image});
+            this.Image,
+            this.M_ChefName});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -250,49 +252,6 @@
             this.dgv_FoodList.Size = new System.Drawing.Size(844, 318);
             this.dgv_FoodList.TabIndex = 1054;
             this.dgv_FoodList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_FoodList_CellContentClick);
-            // 
-            // M_ID
-            // 
-            this.M_ID.DataPropertyName = "M_ID";
-            this.M_ID.HeaderText = "M_ID";
-            this.M_ID.Name = "M_ID";
-            this.M_ID.ReadOnly = true;
-            this.M_ID.Visible = false;
-            this.M_ID.Width = 380;
-            // 
-            // M_Name
-            // 
-            this.M_Name.DataPropertyName = "M_Name";
-            this.M_Name.HeaderText = "Name";
-            this.M_Name.Name = "M_Name";
-            this.M_Name.ReadOnly = true;
-            this.M_Name.Width = 380;
-            // 
-            // M_price
-            // 
-            this.M_price.DataPropertyName = "M_price";
-            this.M_price.HeaderText = "Price";
-            this.M_price.Name = "M_price";
-            this.M_price.ReadOnly = true;
-            this.M_price.Width = 150;
-            // 
-            // M_Type
-            // 
-            this.M_Type.DataPropertyName = "M_Type";
-            this.M_Type.HeaderText = "Type";
-            this.M_Type.Name = "M_Type";
-            this.M_Type.ReadOnly = true;
-            this.M_Type.Width = 150;
-            // 
-            // Image
-            // 
-            this.Image.DataPropertyName = "M_Image";
-            this.Image.HeaderText = "Image";
-            this.Image.Name = "Image";
-            this.Image.ReadOnly = true;
-            this.Image.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Image.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Image.Width = 150;
             // 
             // groupBox2
             // 
@@ -424,6 +383,56 @@
             this.pb_FoodImage.TabIndex = 132;
             this.pb_FoodImage.TabStop = false;
             // 
+            // M_ID
+            // 
+            this.M_ID.DataPropertyName = "M_ID";
+            this.M_ID.HeaderText = "M_ID";
+            this.M_ID.Name = "M_ID";
+            this.M_ID.ReadOnly = true;
+            this.M_ID.Visible = false;
+            this.M_ID.Width = 380;
+            // 
+            // M_Name
+            // 
+            this.M_Name.DataPropertyName = "M_Name";
+            this.M_Name.HeaderText = "Name";
+            this.M_Name.Name = "M_Name";
+            this.M_Name.ReadOnly = true;
+            this.M_Name.Width = 380;
+            // 
+            // M_price
+            // 
+            this.M_price.DataPropertyName = "M_price";
+            this.M_price.HeaderText = "Price";
+            this.M_price.Name = "M_price";
+            this.M_price.ReadOnly = true;
+            this.M_price.Width = 150;
+            // 
+            // M_Type
+            // 
+            this.M_Type.DataPropertyName = "M_Type";
+            this.M_Type.HeaderText = "Type";
+            this.M_Type.Name = "M_Type";
+            this.M_Type.ReadOnly = true;
+            this.M_Type.Width = 150;
+            // 
+            // Image
+            // 
+            this.Image.DataPropertyName = "M_Image";
+            this.Image.HeaderText = "Image";
+            this.Image.Name = "Image";
+            this.Image.ReadOnly = true;
+            this.Image.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Image.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Image.Width = 150;
+            // 
+            // M_ChefName
+            // 
+            this.M_ChefName.DataPropertyName = "M_ChefName";
+            this.M_ChefName.HeaderText = "Chef";
+            this.M_ChefName.Name = "M_ChefName";
+            this.M_ChefName.ReadOnly = true;
+            // 
             // frm_UpdateMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -484,11 +493,12 @@
         private System.Windows.Forms.Button btn_New;
         private System.Windows.Forms.PictureBox pb_FoodImage;
         private System.Windows.Forms.TextBox txt_DataGridViewIndex;
+        private System.Windows.Forms.Button btn_Upload;
         private System.Windows.Forms.DataGridViewTextBoxColumn M_ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn M_Name;
         private System.Windows.Forms.DataGridViewTextBoxColumn M_price;
         private System.Windows.Forms.DataGridViewTextBoxColumn M_Type;
         private System.Windows.Forms.DataGridViewImageColumn Image;
-        private System.Windows.Forms.Button btn_Upload;
+        private System.Windows.Forms.DataGridViewTextBoxColumn M_ChefName;
     }
 }

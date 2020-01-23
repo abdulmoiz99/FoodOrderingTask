@@ -28,9 +28,10 @@ namespace FoodOrderingTask
         {
             // A simple code to re style the datagrid view and to provide better UI experience 
             dgv_FoodList.BorderStyle = BorderStyle.None;
-            dgv_FoodList.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            dgv_FoodList.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(143, 196, 61);
             dgv_FoodList.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            dgv_FoodList.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise;
+            dgv_FoodList.RowsDefaultCellStyle.BackColor = Color.FromArgb(196, 223, 156);
+            dgv_FoodList.DefaultCellStyle.SelectionBackColor = Color.FromArgb(202, 73, 95);
             dgv_FoodList.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
             dgv_FoodList.BackgroundColor = Color.White;
             dgv_FoodList.EnableHeadersVisualStyles = false;
@@ -55,17 +56,17 @@ namespace FoodOrderingTask
         {
             if (rb_Asian.Checked == true)
             {
-                Main.fillDgv(dgv_FoodList, "select M_Name,M_Price,M_Type,M_Image from Menu where M_Type= 'ASIAN' and CAST(M_Name as varchar) like '%" + txt_Find.Text + "%'");
+                Main.fillDgv(dgv_FoodList, "select M_Name,M_Price,M_Type,M_Image,M_ChefAddress,M_ChefName from Menu where M_Type= 'ASIAN' and CAST(M_Name as varchar) like '%" + txt_Find.Text + "%'");
 
             }
             else if (rb_Eastern.Checked == true)
             {
-                Main.fillDgv(dgv_FoodList, "select M_Name,M_Price,M_Type,M_Image from Menu where M_Type= 'EASTERN' and CAST(M_Name as varchar) like '%" + txt_Find.Text + "%'");
+                Main.fillDgv(dgv_FoodList, "select M_Name,M_Price,M_Type,M_Image,M_ChefAddress,M_ChefName from Menu where M_Type= 'EASTERN' and CAST(M_Name as varchar) like '%" + txt_Find.Text + "%'");
 
             }
             else if (rb_Western.Checked == true)
             {
-                Main.fillDgv(dgv_FoodList, "select M_Name,M_Price,M_Type,M_Image from Menu where M_Type= 'WESTERN' and CAST(M_Name as varchar) like '%" + txt_Find.Text + "%'");
+                Main.fillDgv(dgv_FoodList, "select M_Name,M_Price,M_Type,M_Image,M_ChefAddress,M_ChefName from Menu where M_Type= 'WESTERN' and CAST(M_Name as varchar) like '%" + txt_Find.Text + "%'");
 
             }
         }
