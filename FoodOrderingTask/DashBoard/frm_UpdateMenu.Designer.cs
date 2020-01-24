@@ -59,6 +59,7 @@
             this.M_price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.M_Type = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Image = new System.Windows.Forms.DataGridViewImageColumn();
+            this.M_ChefAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.M_ChefName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_FoodList)).BeginInit();
@@ -223,6 +224,7 @@
             this.M_price,
             this.M_Type,
             this.Image,
+            this.M_ChefAddress,
             this.M_ChefName});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
@@ -426,6 +428,13 @@
             this.Image.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.Image.Width = 150;
             // 
+            // M_ChefAddress
+            // 
+            this.M_ChefAddress.DataPropertyName = "M_ChefAddress";
+            this.M_ChefAddress.HeaderText = "ChefAddress";
+            this.M_ChefAddress.Name = "M_ChefAddress";
+            this.M_ChefAddress.ReadOnly = true;
+            // 
             // M_ChefName
             // 
             this.M_ChefName.DataPropertyName = "M_ChefName";
@@ -499,6 +508,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn M_price;
         private System.Windows.Forms.DataGridViewTextBoxColumn M_Type;
         private System.Windows.Forms.DataGridViewImageColumn Image;
+        private System.Windows.Forms.DataGridViewTextBoxColumn M_ChefAddress;
         private System.Windows.Forms.DataGridViewTextBoxColumn M_ChefName;
     }
 }

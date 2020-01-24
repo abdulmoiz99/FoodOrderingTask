@@ -108,11 +108,17 @@ namespace FoodOrderingTask.DashBoard
                     p2.Value = data2;
                     cmd.Parameters.Add(p2);
                     cmd.ExecuteNonQuery();
+                    String query2 = @"UPDATE        MENU
+                                      SET           M_ChefAddress = L_Address
+                                      FROM          Login
+                                      WHERE		    L_Username = '"+ Main.UserName +"' and M_Name = '" + txt_ItemName.Text + "'";
+                    cmd = new SqlCommand(query2, SQL.Con);
+                    cmd.ExecuteNonQuery();
                     AllClear();
                     frm_UpdateMenu_Load(sender, e);
                     btn_cancel_Click(sender, e);
                     MessageBox.Show("Record Added Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                    Main.fillDgv(dgv_FoodList, "select M_ID,M_Name,M_Price,M_Type,M_Image,M_ChefName from MEnu");
+                    Main.fillDgv(dgv_FoodList, "select M_ID,M_Name,M_Price,M_Type,M_Image,M_ChefAddress,M_ChefName from MEnu");
                 }
             }
 
@@ -175,7 +181,7 @@ namespace FoodOrderingTask.DashBoard
 
         private void frm_UpdateMenu_Activated(object sender, EventArgs e)
         {
-            Main.fillDgv(dgv_FoodList, "select M_ID,M_Name,M_Price,M_Type,M_Image,M_ChefName from MEnu");
+            Main.fillDgv(dgv_FoodList, "select M_ID,M_Name,M_Price,M_Type,M_Image,M_ChefAddress,M_ChefName from MEnu");
 
         }
 
