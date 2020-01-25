@@ -50,6 +50,23 @@ namespace FoodOrderingTask
             catch (Exception)
             {
             }
+            try
+            {
+                String QuestionsCount = SQL.ScalarQuery("SELECT COUNT(Q_ID) FROM  SecurityQuestions");
+                if (QuestionsCount == "0")
+                {
+                    MessageBox.Show("No Questions Found", "Suggestion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    this.Close();
+                }
+                else
+                {
+                    Main.fillCombo(cmb_QuestionsID1, "SecurityQuestions", "Q_Questions", "Q_ID", "Q_ID>0 AND Q_ID<6");
+                    Main.fillCombo(cmb_QuestionsID2, "SecurityQuestions", "Q_Questions", "Q_ID", "Q_ID>5 AND Q_ID<11");
+                }
+            }
+            catch (Exception)
+            {
+            }
 
         }
         /// <summary>
@@ -69,42 +86,25 @@ namespace FoodOrderingTask
         }
         private void btn_Login_Click(object sender, EventArgs e)
         {
-            //Some of the checks before saving the data into database 
-            if (txt_Username.Text == "")
+            //Some of the checks before saving the data into database
+            if (cmb_QuestionsID1.SelectedIndex < 0 || cmb_QuestionsID2.SelectedIndex < 0) 
             {
-                MessageBox.Show("Please Enter Username", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please Select Your Questions", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            else if (CheckInList(txt_Username.Text) == true)
+            else if (txt_Question1.Text == "" || txt_Question2.Text == "")
             {
-                MessageBox.Show("Username already Taken", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            else if (txt_Password.Text == "")
-            {
-                MessageBox.Show("Please Enter Password", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            else if (txt_PhoneNo.Text == "")
-            {
-                MessageBox.Show("Please Enter Phone No", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            else if (txt_Emial.Text == "")
-            {
-                MessageBox.Show("Please Enter E-Mail", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            else if (txt_Address.Text == "")
-            {
-                MessageBox.Show("Please Enter Address", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            else if (cmb_RoleID.SelectedIndex < 0)
-            {
-                MessageBox.Show("Please Select Role ", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please Enter Your Answers", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
                 /// Login table holds the record of every user if the provide information is correct a new record is added 
-                SQL.NonScalarQuery(@"Insert Into Login(L_Username                 ,L_Password                 ,L_PhoneNo                 ,L_Email                 ,L_Address                 ,L_Role)
-                                                values('" + txt_Username.Text + "','" + txt_Password.Text + "','" + txt_PhoneNo.Text + "','" + txt_Emial.Text + "','" + txt_Address.Text + "'," + cmb_RoleID.SelectedValue + ")");
+                SQL.NonScalarQuery(@"Insert Into Login(L_Username                 ,L_Password                 ,L_PhoneNo                 ,L_Email                 ,L_Address                 ,L_Role,L_Question1                ,L_Answer1                 ,L_Question2                 ,L_Answer2)
+                                                values('" + txt_Username.Text + "','" + txt_Password.Text + "','" + txt_PhoneNo.Text + "','" + txt_Emial.Text + "','" + txt_Address.Text + "','" + cmb_RoleID.SelectedValue + "'," + (cmb_QuestionsID1.SelectedIndex + 1) + ",'" + txt_Question1.Text + "'," + (cmb_QuestionsID2.SelectedIndex + 6) + ",'" + txt_Question2.Text + "')");
                 // A confirmation message for the user about the registration 
                 MessageBox.Show("User Created Successfull", "Sucess", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
+                frm_Login form = new frm_Login();
+                form.Show();
             }
 
         }
@@ -189,6 +189,81 @@ namespace FoodOrderingTask
             {
                 e.Handled = true;
             }
+        }
+
+        private void btn_Next_Click(object sender, EventArgs e)
+        {
+            //Some of the checks before saving the data into database 
+            if (txt_Username.Text == "")
+            {
+                MessageBox.Show("Please Enter Username", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (CheckInList(txt_Username.Text) == true)
+            {
+                MessageBox.Show("Username already Taken", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (txt_Password.Text == "")
+            {
+                MessageBox.Show("Please Enter Password", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (txt_PhoneNo.Text == "")
+            {
+                MessageBox.Show("Please Enter Phone No", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (txt_Emial.Text == "")
+            {
+                MessageBox.Show("Please Enter E-Mail", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (txt_Address.Text == "")
+            {
+                MessageBox.Show("Please Enter Address", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (cmb_RoleID.SelectedIndex < 0)
+            {
+                MessageBox.Show("Please Select Role ", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else 
+            {
+                btn_Next.Visible = false;
+                txt_Username.Visible = false;
+                txt_Password.Visible = false;
+                txt_Emial.Visible = false;
+                txt_PhoneNo.Visible = false;
+                txt_Address.Visible = false;
+                cmb_RoleID.Visible = false;
+                label1.Visible = false;
+                label2.Visible = false;
+                label3.Visible = false;
+                label4.Visible = false;
+                label5.Visible = false;
+                label6.Visible = false;
+                lab_usernameStatus.Visible = false;
+                lab_PhoneStatus.Visible = false;
+                lab_emailStatus.Visible = false;
+                lab_PasswordStatus.Visible = false;
+                pb_Correct.Visible = false;
+                pb_X.Visible = false;
+                panel1.Visible = false;
+                panel2.Visible = false;
+                panel3.Visible = false;
+                panel3.Visible = false;
+                panel4.Visible = false;
+                panel5.Visible = false;
+                label7.Visible = true;
+                label9.Visible = true;
+                cmb_QuestionsID1.Visible = true;
+                cmb_QuestionsID2.Visible = true;
+                txt_Question1.Visible = true;
+                txt_Question2.Visible = true;
+                panel6.Visible = true;
+                panel7.Visible = true;
+                btn_Login.Visible = true;
+            }
+        }
+
+        private void txt_Question1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

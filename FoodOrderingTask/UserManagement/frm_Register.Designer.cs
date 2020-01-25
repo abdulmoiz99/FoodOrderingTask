@@ -56,6 +56,15 @@
             this.lab_emailStatus = new System.Windows.Forms.Label();
             this.lab_PhoneStatus = new System.Windows.Forms.Label();
             this.lab_PasswordStatus = new System.Windows.Forms.Label();
+            this.btn_Next = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.cmb_QuestionsID1 = new System.Windows.Forms.ComboBox();
+            this.txt_Question1 = new System.Windows.Forms.TextBox();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.cmb_QuestionsID2 = new System.Windows.Forms.ComboBox();
+            this.txt_Question2 = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pb_X)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Correct)).BeginInit();
             this.SuspendLayout();
@@ -123,6 +132,7 @@
             this.btn_Login.TabIndex = 7;
             this.btn_Login.Text = "Sign Up";
             this.btn_Login.UseVisualStyleBackColor = false;
+            this.btn_Login.Visible = false;
             this.btn_Login.Click += new System.EventHandler(this.btn_Login_Click);
             // 
             // txt_Password
@@ -363,18 +373,130 @@
             this.lab_PasswordStatus.Text = "password";
             this.lab_PasswordStatus.Visible = false;
             // 
+            // btn_Next
+            // 
+            this.btn_Next.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(117)))), ((int)(((byte)(25)))));
+            this.btn_Next.FlatAppearance.BorderSize = 0;
+            this.btn_Next.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Next.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Next.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_Next.Location = new System.Drawing.Point(292, 550);
+            this.btn_Next.Name = "btn_Next";
+            this.btn_Next.Size = new System.Drawing.Size(244, 41);
+            this.btn_Next.TabIndex = 7;
+            this.btn_Next.Text = "Next";
+            this.btn_Next.UseVisualStyleBackColor = false;
+            this.btn_Next.Click += new System.EventHandler(this.btn_Next_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(285, 33);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(166, 21);
+            this.label7.TabIndex = 66;
+            this.label7.Text = "Security Question 1";
+            this.label7.Visible = false;
+            // 
+            // cmb_QuestionsID1
+            // 
+            this.cmb_QuestionsID1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(195)))), ((int)(((byte)(97)))));
+            this.cmb_QuestionsID1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmb_QuestionsID1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_QuestionsID1.FormattingEnabled = true;
+            this.cmb_QuestionsID1.Location = new System.Drawing.Point(292, 66);
+            this.cmb_QuestionsID1.Name = "cmb_QuestionsID1";
+            this.cmb_QuestionsID1.Size = new System.Drawing.Size(241, 25);
+            this.cmb_QuestionsID1.TabIndex = 6;
+            this.cmb_QuestionsID1.Visible = false;
+            // 
+            // txt_Question1
+            // 
+            this.txt_Question1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(195)))), ((int)(((byte)(97)))));
+            this.txt_Question1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_Question1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Question1.ForeColor = System.Drawing.Color.White;
+            this.txt_Question1.Location = new System.Drawing.Point(292, 103);
+            this.txt_Question1.Name = "txt_Question1";
+            this.txt_Question1.Size = new System.Drawing.Size(231, 19);
+            this.txt_Question1.TabIndex = 2;
+            this.txt_Question1.Visible = false;
+            this.txt_Question1.TextChanged += new System.EventHandler(this.txt_Question1_TextChanged);
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel6.Location = new System.Drawing.Point(289, 133);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(243, 2);
+            this.panel6.TabIndex = 73;
+            this.panel6.Visible = false;
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel7.Location = new System.Drawing.Point(289, 253);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(243, 2);
+            this.panel7.TabIndex = 77;
+            this.panel7.Visible = false;
+            // 
+            // cmb_QuestionsID2
+            // 
+            this.cmb_QuestionsID2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(195)))), ((int)(((byte)(97)))));
+            this.cmb_QuestionsID2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmb_QuestionsID2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_QuestionsID2.FormattingEnabled = true;
+            this.cmb_QuestionsID2.Location = new System.Drawing.Point(292, 186);
+            this.cmb_QuestionsID2.Name = "cmb_QuestionsID2";
+            this.cmb_QuestionsID2.Size = new System.Drawing.Size(241, 25);
+            this.cmb_QuestionsID2.TabIndex = 75;
+            this.cmb_QuestionsID2.Visible = false;
+            // 
+            // txt_Question2
+            // 
+            this.txt_Question2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(195)))), ((int)(((byte)(97)))));
+            this.txt_Question2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_Question2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Question2.ForeColor = System.Drawing.Color.White;
+            this.txt_Question2.Location = new System.Drawing.Point(292, 223);
+            this.txt_Question2.Name = "txt_Question2";
+            this.txt_Question2.Size = new System.Drawing.Size(231, 19);
+            this.txt_Question2.TabIndex = 74;
+            this.txt_Question2.Visible = false;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(291, 155);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(166, 21);
+            this.label9.TabIndex = 76;
+            this.label9.Text = "Security Question 2";
+            this.label9.Visible = false;
+            // 
             // frm_Register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(195)))), ((int)(((byte)(97)))));
             this.ClientSize = new System.Drawing.Size(629, 609);
+            this.Controls.Add(this.panel7);
+            this.Controls.Add(this.panel6);
+            this.Controls.Add(this.cmb_QuestionsID2);
             this.Controls.Add(this.lab_PasswordStatus);
+            this.Controls.Add(this.txt_Question2);
             this.Controls.Add(this.lab_PhoneStatus);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.lab_emailStatus);
             this.Controls.Add(this.pb_Correct);
             this.Controls.Add(this.lab_usernameStatus);
             this.Controls.Add(this.pb_X);
+            this.Controls.Add(this.cmb_QuestionsID1);
             this.Controls.Add(this.cmb_RoleID);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label3);
@@ -383,6 +505,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.btn_Next);
             this.Controls.Add(this.btn_Login);
             this.Controls.Add(this.txt_Address);
             this.Controls.Add(this.label6);
@@ -390,9 +513,11 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txt_PhoneNo);
             this.Controls.Add(this.label4);
+            this.Controls.Add(this.txt_Question1);
             this.Controls.Add(this.txt_Password);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txt_Username);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.button1);
@@ -437,5 +562,14 @@
         private System.Windows.Forms.Label lab_emailStatus;
         private System.Windows.Forms.Label lab_PhoneStatus;
         private System.Windows.Forms.Label lab_PasswordStatus;
+        private System.Windows.Forms.Button btn_Next;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox cmb_QuestionsID1;
+        private System.Windows.Forms.TextBox txt_Question1;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.ComboBox cmb_QuestionsID2;
+        private System.Windows.Forms.TextBox txt_Question2;
+        private System.Windows.Forms.Label label9;
     }
 }
