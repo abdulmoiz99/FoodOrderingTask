@@ -1,4 +1,5 @@
 ﻿using FoodOrderingTask.DashBoard;
+using FoodOrderingTask.UserManagement;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -107,5 +108,11 @@ namespace FoodOrderingTask
             {
             }
         }
+
+        private void lab_Forgot_Password_Click(object sender, EventArgs e)
+        {
+            frm_Password form = new frm_Password();
+            form.ShowDialog();
+        }
     }
-    }
+}

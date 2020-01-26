@@ -108,6 +108,12 @@
     <Compile Include="UserManagement\frm_Login.Designer.cs">
       <DependentUpon>frm_Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserManagement\frm_Password.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserManagement\frm_Password.Designer.cs">
+      <DependentUpon>frm_Password.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserManagement\frm_Register.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +151,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserManagement\frm_Login.resx">
       <DependentUpon>frm_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\frm_Password.resx">
+      <DependentUpon>frm_Password.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserManagement\frm_Register.resx">
       <DependentUpon>frm_Register.cs</DependentUpon>

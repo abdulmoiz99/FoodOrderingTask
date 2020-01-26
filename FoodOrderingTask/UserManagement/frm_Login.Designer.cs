@@ -46,6 +46,7 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.lab_Forgot_Password = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // cmb_RoleID
@@ -234,6 +235,18 @@
             this.panel6.Size = new System.Drawing.Size(284, 5);
             this.panel6.TabIndex = 0;
             // 
+            // lab_Forgot_Password
+            // 
+            this.lab_Forgot_Password.AutoSize = true;
+            this.lab_Forgot_Password.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lab_Forgot_Password.ForeColor = System.Drawing.Color.BlanchedAlmond;
+            this.lab_Forgot_Password.Location = new System.Drawing.Point(27, 631);
+            this.lab_Forgot_Password.Name = "lab_Forgot_Password";
+            this.lab_Forgot_Password.Size = new System.Drawing.Size(140, 16);
+            this.lab_Forgot_Password.TabIndex = 61;
+            this.lab_Forgot_Password.Text = "Forgot your password?";
+            this.lab_Forgot_Password.Click += new System.EventHandler(this.lab_Forgot_Password_Click);
+            // 
             // frm_Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -246,6 +259,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.cmb_RoleID);
             this.Controls.Add(this.button2);
+            this.Controls.Add(this.lab_Forgot_Password);
             this.Controls.Add(this.lab_CreateAccount);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel2);
@@ -287,6 +301,7 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Label lab_Forgot_Password;
     }
 }
 

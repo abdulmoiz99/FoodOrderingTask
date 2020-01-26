@@ -52,5 +52,10 @@ namespace FoodOrderingTask.DashBoard
                 pnl_RecentPurchase.Visible = false;
             }
         }
+
+        private void lab_Username_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
