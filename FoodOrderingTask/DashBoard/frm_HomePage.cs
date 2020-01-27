@@ -51,6 +51,11 @@ namespace FoodOrderingTask.DashBoard
             {
                 pnl_RecentPurchase.Visible = false;
             }
+
+
+            String Status;
+            Status = SQL.ScalarQuery("select C_Status,C_Id from Cart where C_userID = " + Main.UserID + " ORDER BY C_Id DESC");
+            lab_Status.Text ="Current Delivery Status : "+ Status;
         }
 
         private void lab_Username_Click(object sender, EventArgs e)

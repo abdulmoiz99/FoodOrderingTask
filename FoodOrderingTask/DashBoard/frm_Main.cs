@@ -159,5 +159,16 @@ namespace FoodOrderingTask.DashBoard
             frm.Dock = DockStyle.Fill;
             frm.Show();
         }
+
+        private void btn_DeliveryStatus_Click(object sender, EventArgs e)
+        {
+            if (Main.UserName.ToUpper() == "ADMIN" || Main.UserID ==2)
+            {
+                var frm = new frm_UpdateOrderStatus();
+                frm.MdiParent = this;
+                frm.Dock = DockStyle.Fill;
+                frm.Show();
+            }
+        }
     }
 }
