@@ -38,9 +38,9 @@
             this.txt_state = new System.Windows.Forms.TextBox();
             this.txt_city = new System.Windows.Forms.TextBox();
             this.txt_street = new System.Windows.Forms.TextBox();
-            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.panel8 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.map = new GMap.NET.WindowsForms.GMapControl();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -68,7 +68,7 @@
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.webBrowser1);
+            this.splitContainer1.Panel2.Controls.Add(this.map);
             this.splitContainer1.Size = new System.Drawing.Size(609, 375);
             this.splitContainer1.SplitterDistance = 201;
             this.splitContainer1.SplitterWidth = 3;
@@ -130,7 +130,7 @@
             this.txt_zip.Location = new System.Drawing.Point(80, 135);
             this.txt_zip.Margin = new System.Windows.Forms.Padding(2);
             this.txt_zip.Name = "txt_zip";
-            this.txt_zip.Size = new System.Drawing.Size(68, 20);
+            this.txt_zip.Size = new System.Drawing.Size(84, 20);
             this.txt_zip.TabIndex = 3;
             // 
             // txt_state
@@ -138,15 +138,15 @@
             this.txt_state.Location = new System.Drawing.Point(80, 92);
             this.txt_state.Margin = new System.Windows.Forms.Padding(2);
             this.txt_state.Name = "txt_state";
-            this.txt_state.Size = new System.Drawing.Size(68, 20);
+            this.txt_state.Size = new System.Drawing.Size(84, 20);
             this.txt_state.TabIndex = 2;
             // 
             // txt_city
             // 
-            this.txt_city.Location = new System.Drawing.Point(80, 56);
+            this.txt_city.Location = new System.Drawing.Point(80, 55);
             this.txt_city.Margin = new System.Windows.Forms.Padding(2);
             this.txt_city.Name = "txt_city";
-            this.txt_city.Size = new System.Drawing.Size(68, 20);
+            this.txt_city.Size = new System.Drawing.Size(84, 20);
             this.txt_city.TabIndex = 1;
             // 
             // txt_street
@@ -154,19 +154,8 @@
             this.txt_street.Location = new System.Drawing.Point(80, 18);
             this.txt_street.Margin = new System.Windows.Forms.Padding(2);
             this.txt_street.Name = "txt_street";
-            this.txt_street.Size = new System.Drawing.Size(68, 20);
+            this.txt_street.Size = new System.Drawing.Size(84, 20);
             this.txt_street.TabIndex = 0;
-            // 
-            // webBrowser1
-            // 
-            this.webBrowser1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.webBrowser1.Location = new System.Drawing.Point(0, 0);
-            this.webBrowser1.Margin = new System.Windows.Forms.Padding(2);
-            this.webBrowser1.MinimumSize = new System.Drawing.Size(13, 14);
-            this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(405, 375);
-            this.webBrowser1.TabIndex = 0;
-            this.webBrowser1.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.webBrowser1_DocumentCompleted);
             // 
             // panel8
             // 
@@ -188,6 +177,33 @@
             this.label1.Size = new System.Drawing.Size(290, 56);
             this.label1.TabIndex = 1022;
             this.label1.Text = "Google API";
+            // 
+            // map
+            // 
+            this.map.Bearing = 0F;
+            this.map.CanDragMap = true;
+            this.map.EmptyTileColor = System.Drawing.Color.Navy;
+            this.map.GrayScaleMode = false;
+            this.map.HelperLineOption = GMap.NET.WindowsForms.HelperLineOptions.DontShow;
+            this.map.LevelsKeepInMemory = 5;
+            this.map.Location = new System.Drawing.Point(3, 3);
+            this.map.MarkersEnabled = true;
+            this.map.MaxZoom = 2;
+            this.map.MinZoom = 2;
+            this.map.MouseWheelZoomEnabled = true;
+            this.map.MouseWheelZoomType = GMap.NET.MouseWheelZoomType.MousePositionAndCenter;
+            this.map.Name = "map";
+            this.map.NegativeMode = false;
+            this.map.PolygonsEnabled = true;
+            this.map.RetryLoadTile = 0;
+            this.map.RoutesEnabled = true;
+            this.map.ScaleMode = GMap.NET.WindowsForms.ScaleModes.Integer;
+            this.map.SelectedAreaFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(65)))), ((int)(((byte)(105)))), ((int)(((byte)(225)))));
+            this.map.ShowTileGridLines = false;
+            this.map.Size = new System.Drawing.Size(399, 369);
+            this.map.TabIndex = 0;
+            this.map.Zoom = 0D;
+            this.map.Load += new System.EventHandler(this.gMapControl_Load);
             // 
             // frm_Vicinity
             // 
@@ -225,8 +241,8 @@
         private System.Windows.Forms.TextBox txt_state;
         private System.Windows.Forms.TextBox txt_city;
         private System.Windows.Forms.TextBox txt_street;
-        private System.Windows.Forms.WebBrowser webBrowser1;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Label label1;
+        private GMap.NET.WindowsForms.GMapControl map;
     }
 }
