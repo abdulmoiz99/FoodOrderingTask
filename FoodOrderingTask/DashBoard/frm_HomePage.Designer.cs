@@ -1,6 +1,6 @@
 ﻿namespace FoodOrderingTask.DashBoard
 {
-    partial class frm_HomePage
+    partial class lab_DeliveryStatus
     {
         /// <summary>
         /// Required designer variable.
