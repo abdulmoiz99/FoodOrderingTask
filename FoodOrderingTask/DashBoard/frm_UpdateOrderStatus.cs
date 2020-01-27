@@ -60,6 +60,10 @@ namespace FoodOrderingTask.DashBoard
             {
                 MessageBox.Show("Please Select A Record First", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+            else if (cmb_Status.SelectedIndex<0)
+            {
+                MessageBox.Show("Please Select Delivery Status", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
             else
             {
                 SQL.NonScalarQuery("Update Cart Set C_Status = '" + cmb_Status.Text + "' where C_UserID = " + int.Parse(txt_UserID.Text) + " And C_Status = '" + txt_OrderStatus.Text + "'");

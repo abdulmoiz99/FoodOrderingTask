@@ -46,7 +46,15 @@ namespace FoodOrderingTask.DashBoard
             {
                 pnl_RecentPurchase.Visible = false;
             }
+<<<<<<< HEAD
             label3.Text = dgv_FoodList.RowCount.ToString() + " RECENT PURCHASES";
+=======
+
+
+            String Status;
+            Status = SQL.ScalarQuery("select C_Status,C_Id from Cart where C_userID = " + Main.UserID + " ORDER BY C_Id DESC");
+            lab_Status.Text ="Current Delivery Status : "+ Status;
+>>>>>>> feefd190f6863864c1b496ed201a658a38d30e66
         }
 
         private void lab_Username_Click(object sender, EventArgs e)

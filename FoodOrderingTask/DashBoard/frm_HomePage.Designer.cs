@@ -28,10 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+<<<<<<< HEAD
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
+=======
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+>>>>>>> feefd190f6863864c1b496ed201a658a38d30e66
             this.panel8 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.lab_Username = new System.Windows.Forms.Label();
@@ -44,6 +51,10 @@
             this.M_Type = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnl_RecentPurchase = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+<<<<<<< HEAD
+=======
+            this.lab_Status = new System.Windows.Forms.Label();
+>>>>>>> feefd190f6863864c1b496ed201a658a38d30e66
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_FoodList)).BeginInit();
             this.pnl_RecentPurchase.SuspendLayout();
@@ -104,6 +115,7 @@
             this.dgv_FoodList.AllowUserToOrderColumns = true;
             this.dgv_FoodList.BackgroundColor = System.Drawing.Color.White;
             this.dgv_FoodList.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedVertical;
+<<<<<<< HEAD
             dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(99)))), ((int)(((byte)(99)))));
             dataGridViewCellStyle29.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -112,11 +124,22 @@
             dataGridViewCellStyle29.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgv_FoodList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle29;
+=======
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(99)))), ((int)(((byte)(99)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_FoodList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+>>>>>>> feefd190f6863864c1b496ed201a658a38d30e66
             this.dgv_FoodList.ColumnHeadersHeight = 50;
             this.dgv_FoodList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.M_Name,
             this.M_price,
             this.M_Type});
+<<<<<<< HEAD
             dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle30.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle30.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -140,6 +163,31 @@
             this.dgv_FoodList.RowHeadersWidth = 10;
             dataGridViewCellStyle32.BackColor = System.Drawing.Color.White;
             this.dgv_FoodList.RowsDefaultCellStyle = dataGridViewCellStyle32;
+=======
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_FoodList.DefaultCellStyle = dataGridViewCellStyle6;
+            this.dgv_FoodList.Location = new System.Drawing.Point(22, 282);
+            this.dgv_FoodList.Name = "dgv_FoodList";
+            this.dgv_FoodList.ReadOnly = true;
+            this.dgv_FoodList.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_FoodList.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.dgv_FoodList.RowHeadersWidth = 10;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
+            this.dgv_FoodList.RowsDefaultCellStyle = dataGridViewCellStyle8;
+>>>>>>> feefd190f6863864c1b496ed201a658a38d30e66
             this.dgv_FoodList.RowTemplate.Height = 50;
             this.dgv_FoodList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_FoodList.Size = new System.Drawing.Size(689, 367);
@@ -212,12 +260,30 @@
             this.label1.Text = "NO RECENT PURCHASES";
             this.label1.Click += new System.EventHandler(this.label3_Click);
             // 
+<<<<<<< HEAD
+=======
+            // lab_Status
+            // 
+            this.lab_Status.AutoSize = true;
+            this.lab_Status.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lab_Status.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(99)))), ((int)(((byte)(99)))));
+            this.lab_Status.Location = new System.Drawing.Point(28, 194);
+            this.lab_Status.Name = "lab_Status";
+            this.lab_Status.Size = new System.Drawing.Size(340, 36);
+            this.lab_Status.TabIndex = 1035;
+            this.lab_Status.Text = "NO RECENT PURCHASES";
+            // 
+>>>>>>> feefd190f6863864c1b496ed201a658a38d30e66
             // lab_DeliveryStatus
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(934, 675);
+<<<<<<< HEAD
+=======
+            this.Controls.Add(this.lab_Status);
+>>>>>>> feefd190f6863864c1b496ed201a658a38d30e66
             this.Controls.Add(this.pnl_RecentPurchase);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -254,5 +320,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn M_Type;
         private System.Windows.Forms.Panel pnl_RecentPurchase;
         private System.Windows.Forms.Label label1;
+<<<<<<< HEAD
+=======
+        private System.Windows.Forms.Label lab_Status;
+>>>>>>> feefd190f6863864c1b496ed201a658a38d30e66
     }
 }
