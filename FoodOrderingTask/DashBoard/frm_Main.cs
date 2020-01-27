@@ -23,7 +23,7 @@ namespace FoodOrderingTask.DashBoard
         {
             SidePanel.Height = btn_Home.Height;
             SidePanel.Top = btn_Home.Top;
-            var frm = new frm_HomePage();
+            var frm = new lab_DeliveryStatus();
             frm.MdiParent = this;
             frm.Dock = DockStyle.Fill;
             frm.Show();

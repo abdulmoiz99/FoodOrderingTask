@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace FoodOrderingTask.DashBoard
 {
-    public partial class frm_HomePage : Form
+    public partial class lab_DeliveryStatus : Form
     {
-        public frm_HomePage()
+        public lab_DeliveryStatus()
         {
             InitializeComponent();
           
@@ -54,6 +54,11 @@ namespace FoodOrderingTask.DashBoard
         }
 
         private void lab_Username_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }
