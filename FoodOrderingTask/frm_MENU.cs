@@ -128,8 +128,8 @@ namespace FoodOrderingTask
             }
             else
             {
-                SQL.NonScalarQuery(@"Insert Into Cart(C_userID           ,C_Name                 ,C_Price,C_Type                ,C_Paid)
-                                               values(" + Main.UserID + ",'" + lab_Name.Text + "'," + float.Parse(lab_Price.Text) + ",'" + Type + "',0 )");
+                SQL.NonScalarQuery(@"Insert Into Cart(C_userID           ,C_Name                 ,C_Price,C_Type                ,C_Paid,C_Status)
+                                               values(" + Main.UserID + ",'" + lab_Name.Text + "'," + float.Parse(lab_Price.Text) + ",'" + Type + "',0,'Placed' )");
                 MessageBox.Show("Item Successfully Added To Cart", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }

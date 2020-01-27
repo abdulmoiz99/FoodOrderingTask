@@ -75,7 +75,7 @@ namespace FoodOrderingTask.DashBoard
                     // I have created a feild in the cart table namely C_Paid it can save only two values 1 or 0
                     // If it is zero it means the order is places but the payment is pending 
                     // Here i have updated the C_paid to 1 as the payment is confirmed 
-                    SQL.NonScalarQuery("Update Cart Set C_Paid = 1 Where  C_UserID =" + Main.UserID + "");
+                    SQL.NonScalarQuery("Update Cart Set C_Paid = 1,C_Status = 'Confirmed' Where  C_UserID =" + Main.UserID + "");
                     // A message for success 
                     MessageBox.Show("You Order Will Be Delivered Shortly ", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
