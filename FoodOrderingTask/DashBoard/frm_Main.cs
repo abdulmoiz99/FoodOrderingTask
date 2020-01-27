@@ -23,10 +23,21 @@ namespace FoodOrderingTask.DashBoard
         {
             SidePanel.Height = btn_Home.Height;
             SidePanel.Top = btn_Home.Top;
-            var frm = new lab_DeliveryStatus();
-            frm.MdiParent = this;
-            frm.Dock = DockStyle.Fill;
-            frm.Show();
+            bool isChef = Main.IsChef(Main.UserID);
+            if (isChef)
+            {
+                var frm = new frm_ChefHomePage();
+                frm.MdiParent = this;
+                frm.Dock = DockStyle.Fill;
+                frm.Show();
+            }
+            else 
+            {
+                var frm = new lab_DeliveryStatus();
+                frm.MdiParent = this;
+                frm.Dock = DockStyle.Fill;
+                frm.Show();
+            }
 
         }
         private void btn_Menu_Click(object sender, EventArgs e)

@@ -10,22 +10,26 @@ using System.Windows.Forms;
 
 namespace FoodOrderingTask.DashBoard
 {
-    public partial class lab_DeliveryStatus : Form
+    public partial class frm_ChefHomePage : Form
     {
-        public lab_DeliveryStatus()
+        public frm_ChefHomePage()
         {
             InitializeComponent();
-          
         }
 
-        private void frm_HomePage_Load(object sender, EventArgs e)
+        private void frm_ChefHomePage_Load(object sender, EventArgs e)
         {
             String Username = SQL.ScalarQuery("Select L_Username from login where L_Id = " + Main.UserID + "");
-            lab_Username.Text =  Username.ToUpper();
-            lab_Role.Text = "Customer";
+            lab_Username.Text = Username.ToUpper();
+            lab_Role.Text = "Chef";
         }
 
-        private void frm_HomePage_Activated(object sender, EventArgs e)
+        private void lab_Username_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frm_ChefHomePage_Activated(object sender, EventArgs e)
         {
             dgv_FoodList.BorderStyle = BorderStyle.None;
             dgv_FoodList.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
@@ -41,30 +45,15 @@ namespace FoodOrderingTask.DashBoard
             {
                 row.Height = 40;
             }
-            Main.fillDgv(dgv_FoodList, "Select C_Name,C_Price,C_Type from cart where c_UserId =" + Main.UserID + " AND C_Paid = 1");
-            if(dgv_FoodList.RowCount>0)
+            Main.fillDgv(dgv_FoodList, "Select C_Name,C_Price,C_Type,C_Paid,C_PaymentMethod,C_Status,C_Buyer from cart where c_Seller ='" + Main.UserName + "'");
+            if (dgv_FoodList.RowCount > 0)
             {
-                pnl_RecentPurchase.Visible = false;
+                pnl_RecentSales.Visible = false;
             }
-            label3.Text = dgv_FoodList.RowCount.ToString() + " RECENT PURCHASES";
+            label3.Text = dgv_FoodList.RowCount.ToString() + " RECENT SALES";
         }
 
-        private void lab_Username_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dgv_RecentPurchases_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
+        private void dgv_FoodList_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

@@ -45,6 +45,7 @@ namespace FoodOrderingTask.DashBoard
         // Proceed To Payment Button 
         private void button2_Click(object sender, EventArgs e)
         {
+            SQL.NonScalarQuery("Update Cart Set C_Buyer = '" + Main.UserName + "' Where  C_UserID =" + Main.UserID + "");
             //If  I have intialize the payment mode with CASH if the payment mode is card it will be over write in next if block
             String PaymentMethod = "CASH";
             if (rb_CARD.Checked == true && txt_CardNo.Text == "")
@@ -80,6 +81,7 @@ namespace FoodOrderingTask.DashBoard
                     MessageBox.Show("You Order Will Be Delivered Shortly ", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
+
         }
         /// <summary>
         /// A simple event is called here 

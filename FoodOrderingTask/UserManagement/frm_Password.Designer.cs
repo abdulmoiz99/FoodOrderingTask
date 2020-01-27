@@ -41,15 +41,15 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.btn_Enter2 = new System.Windows.Forms.Button();
-            this.lab_Answers = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.txt_Password = new System.Windows.Forms.TextBox();
-            this.txt_Password2 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.btn_Change = new System.Windows.Forms.Button();
             this.lab_Password_Status = new System.Windows.Forms.Label();
+            this.btn_Change = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txt_Password2 = new System.Windows.Forms.TextBox();
+            this.txt_Password = new System.Windows.Forms.TextBox();
+            this.lab_Answers = new System.Windows.Forms.Label();
+            this.btn_Enter2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -157,6 +157,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(294, 39);
             this.panel1.TabIndex = 77;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // panel2
             // 
@@ -187,28 +188,6 @@
             this.panel3.TabIndex = 3;
             this.panel3.Visible = false;
             // 
-            // btn_Enter2
-            // 
-            this.btn_Enter2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Enter2.Location = new System.Drawing.Point(114, 176);
-            this.btn_Enter2.Name = "btn_Enter2";
-            this.btn_Enter2.Size = new System.Drawing.Size(75, 34);
-            this.btn_Enter2.TabIndex = 2;
-            this.btn_Enter2.Text = "Enter";
-            this.btn_Enter2.UseVisualStyleBackColor = true;
-            this.btn_Enter2.Click += new System.EventHandler(this.btn_Enter2_Click);
-            // 
-            // lab_Answers
-            // 
-            this.lab_Answers.AutoSize = true;
-            this.lab_Answers.ForeColor = System.Drawing.Color.Red;
-            this.lab_Answers.Location = new System.Drawing.Point(12, 156);
-            this.lab_Answers.Name = "lab_Answers";
-            this.lab_Answers.Size = new System.Drawing.Size(95, 13);
-            this.lab_Answers.TabIndex = 3;
-            this.lab_Answers.Text = "Incorrect Answers!";
-            this.lab_Answers.Visible = false;
-            // 
             // panel4
             // 
             this.panel4.Controls.Add(this.lab_Password_Status);
@@ -224,43 +203,16 @@
             this.panel4.TabIndex = 4;
             this.panel4.Visible = false;
             // 
-            // txt_Password
+            // lab_Password_Status
             // 
-            this.txt_Password.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Password.Location = new System.Drawing.Point(12, 52);
-            this.txt_Password.Name = "txt_Password";
-            this.txt_Password.Size = new System.Drawing.Size(270, 24);
-            this.txt_Password.TabIndex = 0;
-            this.txt_Password.UseSystemPasswordChar = true;
-            // 
-            // txt_Password2
-            // 
-            this.txt_Password2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Password2.Location = new System.Drawing.Point(12, 129);
-            this.txt_Password2.Name = "txt_Password2";
-            this.txt_Password2.Size = new System.Drawing.Size(270, 24);
-            this.txt_Password2.TabIndex = 1;
-            this.txt_Password2.UseSystemPasswordChar = true;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(15, 30);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(180, 18);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Enter your new password:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(15, 109);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(167, 18);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Confirm your password:";
+            this.lab_Password_Status.AutoSize = true;
+            this.lab_Password_Status.ForeColor = System.Drawing.Color.Red;
+            this.lab_Password_Status.Location = new System.Drawing.Point(18, 156);
+            this.lab_Password_Status.Name = "lab_Password_Status";
+            this.lab_Password_Status.Size = new System.Drawing.Size(126, 13);
+            this.lab_Password_Status.TabIndex = 3;
+            this.lab_Password_Status.Text = "Passwords do not match!";
+            this.lab_Password_Status.Visible = false;
             // 
             // btn_Change
             // 
@@ -273,16 +225,65 @@
             this.btn_Change.UseVisualStyleBackColor = true;
             this.btn_Change.Click += new System.EventHandler(this.btn_Change_Click);
             // 
-            // lab_Password_Status
+            // label3
             // 
-            this.lab_Password_Status.AutoSize = true;
-            this.lab_Password_Status.ForeColor = System.Drawing.Color.Red;
-            this.lab_Password_Status.Location = new System.Drawing.Point(18, 156);
-            this.lab_Password_Status.Name = "lab_Password_Status";
-            this.lab_Password_Status.Size = new System.Drawing.Size(126, 13);
-            this.lab_Password_Status.TabIndex = 3;
-            this.lab_Password_Status.Text = "Passwords do not match!";
-            this.lab_Password_Status.Visible = false;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(15, 109);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(167, 18);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Confirm your password:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(15, 30);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(180, 18);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Enter your new password:";
+            // 
+            // txt_Password2
+            // 
+            this.txt_Password2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Password2.Location = new System.Drawing.Point(12, 129);
+            this.txt_Password2.Name = "txt_Password2";
+            this.txt_Password2.Size = new System.Drawing.Size(270, 24);
+            this.txt_Password2.TabIndex = 1;
+            this.txt_Password2.UseSystemPasswordChar = true;
+            // 
+            // txt_Password
+            // 
+            this.txt_Password.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Password.Location = new System.Drawing.Point(12, 52);
+            this.txt_Password.Name = "txt_Password";
+            this.txt_Password.Size = new System.Drawing.Size(270, 24);
+            this.txt_Password.TabIndex = 0;
+            this.txt_Password.UseSystemPasswordChar = true;
+            // 
+            // lab_Answers
+            // 
+            this.lab_Answers.AutoSize = true;
+            this.lab_Answers.ForeColor = System.Drawing.Color.Red;
+            this.lab_Answers.Location = new System.Drawing.Point(12, 156);
+            this.lab_Answers.Name = "lab_Answers";
+            this.lab_Answers.Size = new System.Drawing.Size(95, 13);
+            this.lab_Answers.TabIndex = 3;
+            this.lab_Answers.Text = "Incorrect Answers!";
+            this.lab_Answers.Visible = false;
+            // 
+            // btn_Enter2
+            // 
+            this.btn_Enter2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Enter2.Location = new System.Drawing.Point(114, 176);
+            this.btn_Enter2.Name = "btn_Enter2";
+            this.btn_Enter2.Size = new System.Drawing.Size(75, 34);
+            this.btn_Enter2.TabIndex = 2;
+            this.btn_Enter2.Text = "Enter";
+            this.btn_Enter2.UseVisualStyleBackColor = true;
+            this.btn_Enter2.Click += new System.EventHandler(this.btn_Enter2_Click);
             // 
             // frm_Password
             // 

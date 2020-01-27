@@ -98,6 +98,43 @@ namespace FoodOrderingTask
 
         private void dgv_FoodList_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+        }
+
+        private void btn_AddToCart_Click(object sender, EventArgs e)
+        {
+            if (Type == "")
+            {
+                MessageBox.Show("Please Select An Item First", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                try
+                {
+
+                    SQL.NonScalarQuery(@"Insert Into Cart(C_userID           ,C_Name                 ,C_Price,C_Type                ,C_Paid,C_Status,C_Seller)
+                                               values(" + Main.UserID + ",'" + lab_Name.Text + "'," + float.Parse(lab_Price.Text) + ",'" + Type + "',0,'Placed','" + txt_ChefName.Text + "')");
+                    MessageBox.Show("Item Successfully Added To Cart", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex) 
+                {
+                    MessageBox.Show("Please Select an Item");
+                }
+            }
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void txt_ChefName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgv_FoodList_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
             lab_Name1.Visible = true;
             lab_Name.Visible = true;
             lab_Price.Visible = true;
@@ -112,31 +149,13 @@ namespace FoodOrderingTask
                     lab_Name.Text = selectedrow.Cells["M_Name"].Value.ToString();
                     lab_Price.Text = selectedrow.Cells["M_Price"].Value.ToString();
                     Type = selectedrow.Cells["m_type"].Value.ToString();
+                    txt_ChefName.Text = SQL.ScalarQuery("SELECT M_ChefName from Menu where M_Name = '" + lab_Name.Text + "'");
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Find Panel");
             }
-        }
-
-        private void btn_AddToCart_Click(object sender, EventArgs e)
-        {
-            if (Type == "")
-            {
-                MessageBox.Show("Please Select An Item First", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            else
-            {
-                SQL.NonScalarQuery(@"Insert Into Cart(C_userID           ,C_Name                 ,C_Price,C_Type                ,C_Paid,C_Status)
-                                               values(" + Main.UserID + ",'" + lab_Name.Text + "'," + float.Parse(lab_Price.Text) + ",'" + Type + "',0,'Placed' )");
-                MessageBox.Show("Item Successfully Added To Cart", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-        }
-
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }
