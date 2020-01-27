@@ -1,6 +1,6 @@
 ﻿namespace FoodOrderingTask.DashBoard
 {
-    partial class lab_DeliveryStatus
+    partial class frm_HomePage
     {
         /// <summary>
         /// Required designer variable.
@@ -174,7 +174,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(99)))), ((int)(((byte)(99)))));
-            this.label2.Location = new System.Drawing.Point(16, 233);
+            this.label2.Location = new System.Drawing.Point(16, 246);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(287, 36);
             this.label2.TabIndex = 1033;
@@ -183,7 +183,7 @@
             // pnl_RecentPurchase
             // 
             this.pnl_RecentPurchase.Controls.Add(this.label1);
-            this.pnl_RecentPurchase.Location = new System.Drawing.Point(22, 233);
+            this.pnl_RecentPurchase.Location = new System.Drawing.Point(22, 247);
             this.pnl_RecentPurchase.Name = "pnl_RecentPurchase";
             this.pnl_RecentPurchase.Size = new System.Drawing.Size(722, 416);
             this.pnl_RecentPurchase.TabIndex = 1034;
@@ -199,7 +199,6 @@
             this.label1.Size = new System.Drawing.Size(340, 36);
             this.label1.TabIndex = 1034;
             this.label1.Text = "NO RECENT PURCHASES";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label3
             // 
@@ -209,16 +208,15 @@
             this.label3.Location = new System.Drawing.Point(28, 194);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(340, 36);
-            this.label3.TabIndex = 1034;
+            this.label3.TabIndex = 1035;
             this.label3.Text = "NO RECENT PURCHASES";
-            this.label3.Click += new System.EventHandler(this.label1_Click);
             // 
-            // lab_DeliveryStatus
+            // frm_HomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(934, 661);
+            this.ClientSize = new System.Drawing.Size(934, 675);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pnl_RecentPurchase);
             this.Controls.Add(this.label2);
@@ -227,7 +225,7 @@
             this.Controls.Add(this.lab_Username);
             this.Controls.Add(this.panel8);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "lab_DeliveryStatus";
+            this.Name = "frm_HomePage";
             this.Text = "frm_HomePage";
             this.Activated += new System.EventHandler(this.frm_HomePage_Activated);
             this.Load += new System.EventHandler(this.frm_HomePage_Load);
