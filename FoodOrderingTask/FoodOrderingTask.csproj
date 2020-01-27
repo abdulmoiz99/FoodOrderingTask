@@ -113,6 +113,12 @@
     <Compile Include="DashBoard\frm_UpdateMenu.Designer.cs">
       <DependentUpon>frm_UpdateMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="DashBoard\frm_UpdateOrderStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DashBoard\frm_UpdateOrderStatus.Designer.cs">
+      <DependentUpon>frm_UpdateOrderStatus.cs</DependentUpon>
+    </Compile>
     <Compile Include="DashBoard\frm_UpdateUserProfile.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -170,6 +176,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DashBoard\frm_UpdateMenu.resx">
       <DependentUpon>frm_UpdateMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DashBoard\frm_UpdateOrderStatus.resx">
+      <DependentUpon>frm_UpdateOrderStatus.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DashBoard\frm_UpdateUserProfile.resx">
       <DependentUpon>frm_UpdateUserProfile.cs</DependentUpon>
