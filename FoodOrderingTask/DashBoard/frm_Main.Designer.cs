@@ -40,10 +40,10 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btn_DeliveryStatus = new System.Windows.Forms.Button();
             this.btn_Setting = new System.Windows.Forms.Button();
             this.btn_ChefRequest = new System.Windows.Forms.Button();
             this.btn_Close = new System.Windows.Forms.Button();
-            this.btn_DeliveryStatus = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -72,7 +72,7 @@
             this.btn_Chef.ForeColor = System.Drawing.Color.White;
             this.btn_Chef.Image = ((System.Drawing.Image)(resources.GetObject("btn_Chef.Image")));
             this.btn_Chef.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Chef.Location = new System.Drawing.Point(14, 493);
+            this.btn_Chef.Location = new System.Drawing.Point(14, 428);
             this.btn_Chef.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_Chef.Name = "btn_Chef";
             this.btn_Chef.Size = new System.Drawing.Size(217, 83);
@@ -90,7 +90,7 @@
             this.btn_UserSettings.ForeColor = System.Drawing.Color.White;
             this.btn_UserSettings.Image = ((System.Drawing.Image)(resources.GetObject("btn_UserSettings.Image")));
             this.btn_UserSettings.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_UserSettings.Location = new System.Drawing.Point(14, 420);
+            this.btn_UserSettings.Location = new System.Drawing.Point(14, 344);
             this.btn_UserSettings.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_UserSettings.Name = "btn_UserSettings";
             this.btn_UserSettings.Size = new System.Drawing.Size(217, 83);
@@ -108,7 +108,7 @@
             this.btn_Vicitniry.ForeColor = System.Drawing.Color.White;
             this.btn_Vicitniry.Image = ((System.Drawing.Image)(resources.GetObject("btn_Vicitniry.Image")));
             this.btn_Vicitniry.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Vicitniry.Location = new System.Drawing.Point(13, 342);
+            this.btn_Vicitniry.Location = new System.Drawing.Point(12, 509);
             this.btn_Vicitniry.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_Vicitniry.Name = "btn_Vicitniry";
             this.btn_Vicitniry.Size = new System.Drawing.Size(218, 83);
@@ -116,6 +116,7 @@
             this.btn_Vicitniry.Text = "       Vicinity";
             this.btn_Vicitniry.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_Vicitniry.UseVisualStyleBackColor = true;
+            this.btn_Vicitniry.Visible = false;
             this.btn_Vicitniry.Click += new System.EventHandler(this.btn_Vicitniry_Click);
             // 
             // btn_Payment
@@ -212,6 +213,23 @@
             this.panel3.Size = new System.Drawing.Size(585, 55);
             this.panel3.TabIndex = 0;
             // 
+            // btn_DeliveryStatus
+            // 
+            this.btn_DeliveryStatus.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btn_DeliveryStatus.FlatAppearance.BorderSize = 0;
+            this.btn_DeliveryStatus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_DeliveryStatus.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_DeliveryStatus.ForeColor = System.Drawing.Color.White;
+            this.btn_DeliveryStatus.Image = ((System.Drawing.Image)(resources.GetObject("btn_DeliveryStatus.Image")));
+            this.btn_DeliveryStatus.Location = new System.Drawing.Point(325, 0);
+            this.btn_DeliveryStatus.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btn_DeliveryStatus.Name = "btn_DeliveryStatus";
+            this.btn_DeliveryStatus.Size = new System.Drawing.Size(65, 55);
+            this.btn_DeliveryStatus.TabIndex = 11;
+            this.btn_DeliveryStatus.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_DeliveryStatus.UseVisualStyleBackColor = true;
+            this.btn_DeliveryStatus.Click += new System.EventHandler(this.btn_DeliveryStatus_Click);
+            // 
             // btn_Setting
             // 
             this.btn_Setting.Dock = System.Windows.Forms.DockStyle.Right;
@@ -262,23 +280,6 @@
             this.btn_Close.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_Close.UseVisualStyleBackColor = true;
             this.btn_Close.Click += new System.EventHandler(this.btn_Close_Click_1);
-            // 
-            // btn_DeliveryStatus
-            // 
-            this.btn_DeliveryStatus.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btn_DeliveryStatus.FlatAppearance.BorderSize = 0;
-            this.btn_DeliveryStatus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_DeliveryStatus.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_DeliveryStatus.ForeColor = System.Drawing.Color.White;
-            this.btn_DeliveryStatus.Image = ((System.Drawing.Image)(resources.GetObject("btn_DeliveryStatus.Image")));
-            this.btn_DeliveryStatus.Location = new System.Drawing.Point(325, 0);
-            this.btn_DeliveryStatus.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btn_DeliveryStatus.Name = "btn_DeliveryStatus";
-            this.btn_DeliveryStatus.Size = new System.Drawing.Size(65, 55);
-            this.btn_DeliveryStatus.TabIndex = 11;
-            this.btn_DeliveryStatus.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_DeliveryStatus.UseVisualStyleBackColor = true;
-            this.btn_DeliveryStatus.Click += new System.EventHandler(this.btn_DeliveryStatus_Click);
             // 
             // frm_Main
             // 

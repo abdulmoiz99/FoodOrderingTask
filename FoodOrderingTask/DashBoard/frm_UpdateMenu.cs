@@ -125,16 +125,32 @@ namespace FoodOrderingTask.DashBoard
 
             else if (mode == 2)
             {
-                //DialogResult YesOrNo = MessageBox.Show("Are you sure To UPDATE the current Record", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                //if (YesOrNo == DialogResult.Yes)
-                //{
-                //    SQL.NonScalarQuery("update CustomerMaster set CustomerName='" + txt_CustomerName.Text + "',CustomerFatherName='" + txt_CustomerFName.Text + "',CustomerCNIC='" + txt_CustomerCNIC.Text + "',CustomerContactNo='" + txt_CustomerContactNo.Text + "',CustomerAddress='" + txt_CustomerContactNo.Text + "',CustomerCityid=" + cmb_City.SelectedValue + ",CustomerActive=" + active + " where CustomerId=" + int.Parse(txt_DataGridViewIndex.Text) + "");
-                //    AllClear();
-                //    frm_AddCustomer_Load(sender, e);
-                //    btn_cancel_Click(sender, e);
-                //    MessageBox.Show("Record Updated Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                //}
-                //else MessageBox.Show("You Donot Have The Rights To Update Data", "Access Denied", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                DialogResult YesOrNo = MessageBox.Show("Are you sure To UPDATE the current Record", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (YesOrNo == DialogResult.Yes)
+                {
+                    if (SQL.Con.State == ConnectionState.Open)
+                    {
+                        SQL.Con.Close();
+                    }
+                    SQL.Con.Open();
+                    String Query = ("Update Menu Set M_Name='"+txt_ItemName.Text+"', M_Price='"+txt_Price.Text+"',M_Type='"+Type+"',M_Image=@pic where M_Name='"+txt_EditName.Text+"'");
+
+                    SqlCommand cmd = new SqlCommand(Query, SQL.Con);
+                    //   SQL.Con.cmd.Connection = cc.con;
+                    var ms2 = new MemoryStream();
+                    pb_FoodImage.Image.Save(ms2, pb_FoodImage.Image.RawFormat);
+                    byte[] data2 = ms2.GetBuffer();
+                    SqlParameter p2 = new SqlParameter("@pic", SqlDbType.Image);
+                    p2.Value = data2;
+                    cmd.Parameters.Add(p2);
+                    cmd.ExecuteNonQuery();
+                    AllClear();
+                    frm_UpdateMenu_Load(sender, e);
+                    btn_cancel_Click(sender, e);
+                    MessageBox.Show("Record Updated Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    Main.fillDgv(dgv_FoodList, "select M_ID,M_Name,M_Price,M_Type,M_Image,M_ChefAddress,M_ChefName from MEnu");
+                }
+                else MessageBox.Show("You Donot Have The Rights To Update Data", "Access Denied", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
         }
@@ -224,6 +240,84 @@ namespace FoodOrderingTask.DashBoard
                 pb_FoodImage.SizeMode = PictureBoxSizeMode.StretchImage;
 
             }
+        }
+
+        private void dgv_FoodList_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //try
+            //{
+
+            int index = e.RowIndex;
+            if (index > -1)
+            {
+                txt_DataGridViewIndex.Text = index.ToString();
+                DataGridViewRow selectedrow = dgv_FoodList.Rows[index];
+                txt_DataGridViewIndex.Text = selectedrow.Cells["M_ID"].Value.ToString();
+                txt_ItemName.Text = selectedrow.Cells["M_Name"].Value.ToString();
+                txt_EditName.Text = selectedrow.Cells["M_Name"].Value.ToString();
+                txt_Price.Text = selectedrow.Cells["M_Price"].Value.ToString();
+                //  pb_FoodImage.Image =Convert.Tma selectedrow.Cells["M_Image"].Value.ToString();
+
+            }
+            index = 0;
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.Message);
+            //}
+            btn_delete.Enabled = true;
+        }
+
+        private void btn_delete_Click_1(object sender, EventArgs e)
+        {
+            if (txt_ItemName.Text.Length > 0 && txt_Price.Text.Length > 0)
+            {
+                DialogResult YesOrNo = MessageBox.Show("Are you sure To DELETE the current Record?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (YesOrNo == DialogResult.Yes)
+                {
+                    SQL.NonScalarQuery("DELETE from MENU where M_Name = '" + txt_ItemName.Text + "'");
+                    MessageBox.Show("Item Deleted Successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txt_ItemName.Text = "";
+                    txt_Price.Text = "";
+                    btn_delete.Enabled = false;
+                    Main.fillDgv(dgv_FoodList, "select M_ID,M_Name,M_Price,M_Type,M_Image,M_ChefAddress,M_ChefName from MEnu");
+                }
+            }
+            else 
+            {
+                MessageBox.Show("Please Select an Item First!", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+        }
+
+        private void dgv_FoodList_SelectionChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void dgv_FoodList_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            //try
+            //{
+
+            int index = e.RowIndex;
+            if (index > -1)
+            {
+                txt_DataGridViewIndex.Text = index.ToString();
+                DataGridViewRow selectedrow = dgv_FoodList.Rows[index];
+                txt_DataGridViewIndex.Text = selectedrow.Cells["M_ID"].Value.ToString();
+                txt_ItemName.Text = selectedrow.Cells["M_Name"].Value.ToString();
+                txt_EditName.Text = selectedrow.Cells["M_Name"].Value.ToString();
+                txt_Price.Text = selectedrow.Cells["M_Price"].Value.ToString();
+                //  pb_FoodImage.Image =Convert.Tma selectedrow.Cells["M_Image"].Value.ToString();
+
+            }
+            index = 0;
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.Message);
+            //}
+            btn_delete.Enabled = true;
         }
     }
 }
