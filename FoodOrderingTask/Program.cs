@@ -17,7 +17,7 @@ namespace FoodOrderingTask
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frm_UpdateOrderStatus());
+            Application.Run(new frm_Login());
         }
     }
 }
