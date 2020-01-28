@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_UpdateMenu));
             this.panel8 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
@@ -46,14 +46,8 @@
             this.rb_Eastern = new System.Windows.Forms.RadioButton();
             this.rb_Western = new System.Windows.Forms.RadioButton();
             this.dgv_FoodList = new System.Windows.Forms.DataGridView();
-            this.M_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.M_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.M_price = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.M_Type = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Image = new System.Windows.Forms.DataGridViewImageColumn();
-            this.M_ChefAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.M_ChefName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btn_delete = new System.Windows.Forms.Button();
             this.btn_Save = new System.Windows.Forms.Button();
             this.btn_cancel = new System.Windows.Forms.Button();
             this.btn_edit = new System.Windows.Forms.Button();
@@ -61,8 +55,14 @@
             this.txt_DataGridViewIndex = new System.Windows.Forms.TextBox();
             this.btn_Upload = new System.Windows.Forms.Button();
             this.pb_FoodImage = new System.Windows.Forms.PictureBox();
-            this.btn_delete = new System.Windows.Forms.Button();
             this.txt_EditName = new System.Windows.Forms.TextBox();
+            this.M_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.M_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.M_price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.M_Type = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Image = new System.Windows.Forms.DataGridViewImageColumn();
+            this.M_ChefAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.M_ChefName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_FoodList)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -212,14 +212,14 @@
             this.dgv_FoodList.AllowUserToOrderColumns = true;
             this.dgv_FoodList.BackgroundColor = System.Drawing.Color.White;
             this.dgv_FoodList.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedVertical;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(99)))), ((int)(((byte)(99)))));
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_FoodList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(99)))), ((int)(((byte)(99)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_FoodList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_FoodList.ColumnHeadersHeight = 50;
             this.dgv_FoodList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.M_ID,
@@ -229,29 +229,29 @@
             this.Image,
             this.M_ChefAddress,
             this.M_ChefName});
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_FoodList.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_FoodList.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_FoodList.Location = new System.Drawing.Point(23, 393);
             this.dgv_FoodList.Name = "dgv_FoodList";
             this.dgv_FoodList.ReadOnly = true;
             this.dgv_FoodList.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_FoodList.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_FoodList.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_FoodList.RowHeadersWidth = 10;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
-            this.dgv_FoodList.RowsDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.dgv_FoodList.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgv_FoodList.RowTemplate.Height = 50;
             this.dgv_FoodList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_FoodList.Size = new System.Drawing.Size(844, 276);
@@ -260,63 +260,6 @@
             this.dgv_FoodList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_FoodList_CellContentClick);
             this.dgv_FoodList.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_FoodList_RowEnter);
             this.dgv_FoodList.SelectionChanged += new System.EventHandler(this.dgv_FoodList_SelectionChanged);
-            // 
-            // M_ID
-            // 
-            this.M_ID.DataPropertyName = "M_ID";
-            this.M_ID.HeaderText = "M_ID";
-            this.M_ID.Name = "M_ID";
-            this.M_ID.ReadOnly = true;
-            this.M_ID.Visible = false;
-            this.M_ID.Width = 380;
-            // 
-            // M_Name
-            // 
-            this.M_Name.DataPropertyName = "M_Name";
-            this.M_Name.HeaderText = "Name";
-            this.M_Name.Name = "M_Name";
-            this.M_Name.ReadOnly = true;
-            this.M_Name.Width = 380;
-            // 
-            // M_price
-            // 
-            this.M_price.DataPropertyName = "M_price";
-            this.M_price.HeaderText = "Price";
-            this.M_price.Name = "M_price";
-            this.M_price.ReadOnly = true;
-            this.M_price.Width = 150;
-            // 
-            // M_Type
-            // 
-            this.M_Type.DataPropertyName = "M_Type";
-            this.M_Type.HeaderText = "Type";
-            this.M_Type.Name = "M_Type";
-            this.M_Type.ReadOnly = true;
-            this.M_Type.Width = 150;
-            // 
-            // Image
-            // 
-            this.Image.DataPropertyName = "M_Image";
-            this.Image.HeaderText = "Image";
-            this.Image.Name = "Image";
-            this.Image.ReadOnly = true;
-            this.Image.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Image.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Image.Width = 150;
-            // 
-            // M_ChefAddress
-            // 
-            this.M_ChefAddress.DataPropertyName = "M_ChefAddress";
-            this.M_ChefAddress.HeaderText = "ChefAddress";
-            this.M_ChefAddress.Name = "M_ChefAddress";
-            this.M_ChefAddress.ReadOnly = true;
-            // 
-            // M_ChefName
-            // 
-            this.M_ChefName.DataPropertyName = "M_ChefName";
-            this.M_ChefName.HeaderText = "Chef";
-            this.M_ChefName.Name = "M_ChefName";
-            this.M_ChefName.ReadOnly = true;
             // 
             // groupBox2
             // 
@@ -330,6 +273,27 @@
             this.groupBox2.Size = new System.Drawing.Size(190, 297);
             this.groupBox2.TabIndex = 1055;
             this.groupBox2.TabStop = false;
+            // 
+            // btn_delete
+            // 
+            this.btn_delete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(174)))), ((int)(((byte)(174)))));
+            this.btn_delete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btn_delete.Enabled = false;
+            this.btn_delete.FlatAppearance.BorderSize = 0;
+            this.btn_delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_delete.ForeColor = System.Drawing.Color.White;
+            this.btn_delete.Image = global::FoodOrderingTask.Properties.Resources.icons8_delete_bin_30;
+            this.btn_delete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_delete.Location = new System.Drawing.Point(9, 131);
+            this.btn_delete.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.btn_delete.Name = "btn_delete";
+            this.btn_delete.Size = new System.Drawing.Size(172, 43);
+            this.btn_delete.TabIndex = 132;
+            this.btn_delete.TabStop = false;
+            this.btn_delete.Text = "  &Delete";
+            this.btn_delete.UseVisualStyleBackColor = false;
+            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click_1);
             // 
             // btn_Save
             // 
@@ -449,27 +413,6 @@
             this.pb_FoodImage.TabIndex = 132;
             this.pb_FoodImage.TabStop = false;
             // 
-            // btn_delete
-            // 
-            this.btn_delete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(174)))), ((int)(((byte)(174)))));
-            this.btn_delete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btn_delete.Enabled = false;
-            this.btn_delete.FlatAppearance.BorderSize = 0;
-            this.btn_delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_delete.ForeColor = System.Drawing.Color.White;
-            this.btn_delete.Image = global::FoodOrderingTask.Properties.Resources.icons8_delete_bin_30;
-            this.btn_delete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_delete.Location = new System.Drawing.Point(9, 131);
-            this.btn_delete.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.btn_delete.Name = "btn_delete";
-            this.btn_delete.Size = new System.Drawing.Size(172, 43);
-            this.btn_delete.TabIndex = 132;
-            this.btn_delete.TabStop = false;
-            this.btn_delete.Text = "  &Delete";
-            this.btn_delete.UseVisualStyleBackColor = false;
-            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click_1);
-            // 
             // txt_EditName
             // 
             this.txt_EditName.Location = new System.Drawing.Point(23, 393);
@@ -477,6 +420,64 @@
             this.txt_EditName.Size = new System.Drawing.Size(100, 20);
             this.txt_EditName.TabIndex = 1058;
             this.txt_EditName.Visible = false;
+            // 
+            // M_ID
+            // 
+            this.M_ID.DataPropertyName = "M_ID";
+            this.M_ID.HeaderText = "M_ID";
+            this.M_ID.Name = "M_ID";
+            this.M_ID.ReadOnly = true;
+            this.M_ID.Visible = false;
+            this.M_ID.Width = 380;
+            // 
+            // M_Name
+            // 
+            this.M_Name.DataPropertyName = "M_Name";
+            this.M_Name.HeaderText = "Name";
+            this.M_Name.Name = "M_Name";
+            this.M_Name.ReadOnly = true;
+            this.M_Name.Width = 380;
+            // 
+            // M_price
+            // 
+            this.M_price.DataPropertyName = "M_price";
+            this.M_price.HeaderText = "Price";
+            this.M_price.Name = "M_price";
+            this.M_price.ReadOnly = true;
+            this.M_price.Width = 150;
+            // 
+            // M_Type
+            // 
+            this.M_Type.DataPropertyName = "M_Type";
+            this.M_Type.HeaderText = "Type";
+            this.M_Type.Name = "M_Type";
+            this.M_Type.ReadOnly = true;
+            this.M_Type.Width = 150;
+            // 
+            // Image
+            // 
+            this.Image.DataPropertyName = "M_Image";
+            this.Image.HeaderText = "Image";
+            this.Image.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
+            this.Image.Name = "Image";
+            this.Image.ReadOnly = true;
+            this.Image.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Image.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Image.Width = 150;
+            // 
+            // M_ChefAddress
+            // 
+            this.M_ChefAddress.DataPropertyName = "M_ChefAddress";
+            this.M_ChefAddress.HeaderText = "ChefAddress";
+            this.M_ChefAddress.Name = "M_ChefAddress";
+            this.M_ChefAddress.ReadOnly = true;
+            // 
+            // M_ChefName
+            // 
+            this.M_ChefName.DataPropertyName = "M_ChefName";
+            this.M_ChefName.HeaderText = "Chef";
+            this.M_ChefName.Name = "M_ChefName";
+            this.M_ChefName.ReadOnly = true;
             // 
             // frm_UpdateMenu
             // 
@@ -540,6 +541,8 @@
         private System.Windows.Forms.PictureBox pb_FoodImage;
         private System.Windows.Forms.TextBox txt_DataGridViewIndex;
         private System.Windows.Forms.Button btn_Upload;
+        private System.Windows.Forms.Button btn_delete;
+        private System.Windows.Forms.TextBox txt_EditName;
         private System.Windows.Forms.DataGridViewTextBoxColumn M_ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn M_Name;
         private System.Windows.Forms.DataGridViewTextBoxColumn M_price;
@@ -547,7 +550,5 @@
         private System.Windows.Forms.DataGridViewImageColumn Image;
         private System.Windows.Forms.DataGridViewTextBoxColumn M_ChefAddress;
         private System.Windows.Forms.DataGridViewTextBoxColumn M_ChefName;
-        private System.Windows.Forms.Button btn_delete;
-        private System.Windows.Forms.TextBox txt_EditName;
     }
 }

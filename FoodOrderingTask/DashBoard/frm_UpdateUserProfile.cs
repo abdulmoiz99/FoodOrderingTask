@@ -26,6 +26,10 @@ namespace FoodOrderingTask.DashBoard
         private void frm_UpdateUserProfile_Load(object sender, EventArgs e)
         {
             txt_Username.Text = Main.UserName;
+            txt_Email.Text = SQL.ScalarQuery("Select L_Email from login where L_ID =" + Main.UserID + "");
+            txt_Phone.Text = SQL.ScalarQuery("Select L_PhoneNo from login where L_ID =" + Main.UserID + "");
+            txt_Address.Text = SQL.ScalarQuery("Select L_Address from login where L_ID =" + Main.UserID + "");
+
         }
 
         private void txt_Username_TextChanged(object sender, EventArgs e)
