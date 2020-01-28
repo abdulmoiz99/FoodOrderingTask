@@ -46,6 +46,13 @@
             this.rb_Eastern = new System.Windows.Forms.RadioButton();
             this.rb_Western = new System.Windows.Forms.RadioButton();
             this.dgv_FoodList = new System.Windows.Forms.DataGridView();
+            this.M_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.M_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.M_price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.M_Type = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Image = new System.Windows.Forms.DataGridViewImageColumn();
+            this.M_ChefAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.M_ChefName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btn_Save = new System.Windows.Forms.Button();
             this.btn_cancel = new System.Windows.Forms.Button();
@@ -54,13 +61,7 @@
             this.txt_DataGridViewIndex = new System.Windows.Forms.TextBox();
             this.btn_Upload = new System.Windows.Forms.Button();
             this.pb_FoodImage = new System.Windows.Forms.PictureBox();
-            this.M_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.M_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.M_price = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.M_Type = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Image = new System.Windows.Forms.DataGridViewImageColumn();
-            this.M_ChefAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.M_ChefName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btn_delete = new System.Windows.Forms.Button();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_FoodList)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -234,7 +235,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgv_FoodList.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgv_FoodList.Location = new System.Drawing.Point(23, 351);
+            this.dgv_FoodList.Location = new System.Drawing.Point(23, 391);
             this.dgv_FoodList.Name = "dgv_FoodList";
             this.dgv_FoodList.ReadOnly = true;
             this.dgv_FoodList.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
@@ -251,139 +252,12 @@
             this.dgv_FoodList.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgv_FoodList.RowTemplate.Height = 50;
             this.dgv_FoodList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_FoodList.Size = new System.Drawing.Size(844, 318);
+            this.dgv_FoodList.Size = new System.Drawing.Size(844, 278);
             this.dgv_FoodList.TabIndex = 1054;
+            this.dgv_FoodList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_FoodList_CellClick);
             this.dgv_FoodList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_FoodList_CellContentClick);
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.btn_Save);
-            this.groupBox2.Controls.Add(this.btn_cancel);
-            this.groupBox2.Controls.Add(this.btn_edit);
-            this.groupBox2.Controls.Add(this.btn_New);
-            this.groupBox2.Location = new System.Drawing.Point(687, 88);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(190, 249);
-            this.groupBox2.TabIndex = 1055;
-            this.groupBox2.TabStop = false;
-            // 
-            // btn_Save
-            // 
-            this.btn_Save.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(174)))), ((int)(((byte)(174)))));
-            this.btn_Save.Enabled = false;
-            this.btn_Save.FlatAppearance.BorderSize = 0;
-            this.btn_Save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Save.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Save.ForeColor = System.Drawing.Color.White;
-            this.btn_Save.Image = global::FoodOrderingTask.Properties.Resources.icons8_save_30;
-            this.btn_Save.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Save.Location = new System.Drawing.Point(8, 134);
-            this.btn_Save.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.btn_Save.Name = "btn_Save";
-            this.btn_Save.Size = new System.Drawing.Size(172, 43);
-            this.btn_Save.TabIndex = 131;
-            this.btn_Save.TabStop = false;
-            this.btn_Save.Text = "  &Save";
-            this.btn_Save.UseVisualStyleBackColor = false;
-            this.btn_Save.Click += new System.EventHandler(this.btn_Save_Click);
-            // 
-            // btn_cancel
-            // 
-            this.btn_cancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(174)))), ((int)(((byte)(174)))));
-            this.btn_cancel.Enabled = false;
-            this.btn_cancel.FlatAppearance.BorderSize = 0;
-            this.btn_cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_cancel.ForeColor = System.Drawing.Color.White;
-            this.btn_cancel.Image = global::FoodOrderingTask.Properties.Resources.icons8_undo_30;
-            this.btn_cancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_cancel.Location = new System.Drawing.Point(7, 189);
-            this.btn_cancel.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.btn_cancel.Name = "btn_cancel";
-            this.btn_cancel.Size = new System.Drawing.Size(172, 43);
-            this.btn_cancel.TabIndex = 130;
-            this.btn_cancel.TabStop = false;
-            this.btn_cancel.Text = "  &Cancel";
-            this.btn_cancel.UseVisualStyleBackColor = false;
-            this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
-            // 
-            // btn_edit
-            // 
-            this.btn_edit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(174)))), ((int)(((byte)(174)))));
-            this.btn_edit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btn_edit.FlatAppearance.BorderSize = 0;
-            this.btn_edit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_edit.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_edit.ForeColor = System.Drawing.Color.White;
-            this.btn_edit.Image = ((System.Drawing.Image)(resources.GetObject("btn_edit.Image")));
-            this.btn_edit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_edit.Location = new System.Drawing.Point(8, 78);
-            this.btn_edit.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.btn_edit.Name = "btn_edit";
-            this.btn_edit.Size = new System.Drawing.Size(172, 43);
-            this.btn_edit.TabIndex = 128;
-            this.btn_edit.TabStop = false;
-            this.btn_edit.Text = "  &Edit";
-            this.btn_edit.UseVisualStyleBackColor = false;
-            this.btn_edit.Click += new System.EventHandler(this.btn_edit_Click);
-            // 
-            // btn_New
-            // 
-            this.btn_New.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(174)))), ((int)(((byte)(174)))));
-            this.btn_New.FlatAppearance.BorderSize = 0;
-            this.btn_New.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_New.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_New.ForeColor = System.Drawing.Color.White;
-            this.btn_New.Image = global::FoodOrderingTask.Properties.Resources.icons8_add_folder_30;
-            this.btn_New.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_New.Location = new System.Drawing.Point(8, 22);
-            this.btn_New.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.btn_New.Name = "btn_New";
-            this.btn_New.Size = new System.Drawing.Size(172, 43);
-            this.btn_New.TabIndex = 127;
-            this.btn_New.TabStop = false;
-            this.btn_New.Text = "&New";
-            this.btn_New.UseVisualStyleBackColor = false;
-            this.btn_New.Click += new System.EventHandler(this.btn_New_Click);
-            // 
-            // txt_DataGridViewIndex
-            // 
-            this.txt_DataGridViewIndex.BackColor = System.Drawing.Color.White;
-            this.txt_DataGridViewIndex.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_DataGridViewIndex.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(99)))), ((int)(((byte)(99)))));
-            this.txt_DataGridViewIndex.Location = new System.Drawing.Point(22, 351);
-            this.txt_DataGridViewIndex.Name = "txt_DataGridViewIndex";
-            this.txt_DataGridViewIndex.Size = new System.Drawing.Size(14, 37);
-            this.txt_DataGridViewIndex.TabIndex = 1056;
-            this.txt_DataGridViewIndex.Visible = false;
-            // 
-            // btn_Upload
-            // 
-            this.btn_Upload.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(174)))), ((int)(((byte)(174)))));
-            this.btn_Upload.FlatAppearance.BorderSize = 0;
-            this.btn_Upload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Upload.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Upload.ForeColor = System.Drawing.Color.White;
-            this.btn_Upload.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Upload.Location = new System.Drawing.Point(534, 294);
-            this.btn_Upload.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.btn_Upload.Name = "btn_Upload";
-            this.btn_Upload.Size = new System.Drawing.Size(145, 43);
-            this.btn_Upload.TabIndex = 1057;
-            this.btn_Upload.TabStop = false;
-            this.btn_Upload.Text = "UPLOAD";
-            this.btn_Upload.UseVisualStyleBackColor = false;
-            this.btn_Upload.Click += new System.EventHandler(this.btn_Upload_Click);
-            // 
-            // pb_FoodImage
-            // 
-            this.pb_FoodImage.Image = global::FoodOrderingTask.Properties.Resources.icons8_food_100;
-            this.pb_FoodImage.Location = new System.Drawing.Point(534, 103);
-            this.pb_FoodImage.Name = "pb_FoodImage";
-            this.pb_FoodImage.Size = new System.Drawing.Size(147, 181);
-            this.pb_FoodImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pb_FoodImage.TabIndex = 132;
-            this.pb_FoodImage.TabStop = false;
+            this.dgv_FoodList.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_FoodList_RowEnter);
+            this.dgv_FoodList.SelectionChanged += new System.EventHandler(this.dgv_FoodList_SelectionChanged);
             // 
             // M_ID
             // 
@@ -442,17 +316,169 @@
             this.M_ChefName.Name = "M_ChefName";
             this.M_ChefName.ReadOnly = true;
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.btn_delete);
+            this.groupBox2.Controls.Add(this.btn_Save);
+            this.groupBox2.Controls.Add(this.btn_cancel);
+            this.groupBox2.Controls.Add(this.btn_edit);
+            this.groupBox2.Controls.Add(this.btn_New);
+            this.groupBox2.Location = new System.Drawing.Point(687, 88);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(190, 297);
+            this.groupBox2.TabIndex = 1055;
+            this.groupBox2.TabStop = false;
+            // 
+            // btn_Save
+            // 
+            this.btn_Save.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(174)))), ((int)(((byte)(174)))));
+            this.btn_Save.Enabled = false;
+            this.btn_Save.FlatAppearance.BorderSize = 0;
+            this.btn_Save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Save.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Save.ForeColor = System.Drawing.Color.White;
+            this.btn_Save.Image = global::FoodOrderingTask.Properties.Resources.icons8_save_30;
+            this.btn_Save.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Save.Location = new System.Drawing.Point(8, 186);
+            this.btn_Save.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.btn_Save.Name = "btn_Save";
+            this.btn_Save.Size = new System.Drawing.Size(172, 44);
+            this.btn_Save.TabIndex = 131;
+            this.btn_Save.TabStop = false;
+            this.btn_Save.Text = "  &Save";
+            this.btn_Save.UseVisualStyleBackColor = false;
+            this.btn_Save.Click += new System.EventHandler(this.btn_Save_Click);
+            // 
+            // btn_cancel
+            // 
+            this.btn_cancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(174)))), ((int)(((byte)(174)))));
+            this.btn_cancel.Enabled = false;
+            this.btn_cancel.FlatAppearance.BorderSize = 0;
+            this.btn_cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_cancel.ForeColor = System.Drawing.Color.White;
+            this.btn_cancel.Image = global::FoodOrderingTask.Properties.Resources.icons8_undo_30;
+            this.btn_cancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_cancel.Location = new System.Drawing.Point(7, 241);
+            this.btn_cancel.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.btn_cancel.Name = "btn_cancel";
+            this.btn_cancel.Size = new System.Drawing.Size(172, 44);
+            this.btn_cancel.TabIndex = 130;
+            this.btn_cancel.TabStop = false;
+            this.btn_cancel.Text = "  &Cancel";
+            this.btn_cancel.UseVisualStyleBackColor = false;
+            this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
+            // 
+            // btn_edit
+            // 
+            this.btn_edit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(174)))), ((int)(((byte)(174)))));
+            this.btn_edit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btn_edit.FlatAppearance.BorderSize = 0;
+            this.btn_edit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_edit.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_edit.ForeColor = System.Drawing.Color.White;
+            this.btn_edit.Image = ((System.Drawing.Image)(resources.GetObject("btn_edit.Image")));
+            this.btn_edit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_edit.Location = new System.Drawing.Point(8, 78);
+            this.btn_edit.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.btn_edit.Name = "btn_edit";
+            this.btn_edit.Size = new System.Drawing.Size(172, 43);
+            this.btn_edit.TabIndex = 128;
+            this.btn_edit.TabStop = false;
+            this.btn_edit.Text = "  &Edit";
+            this.btn_edit.UseVisualStyleBackColor = false;
+            this.btn_edit.Click += new System.EventHandler(this.btn_edit_Click);
+            // 
+            // btn_New
+            // 
+            this.btn_New.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(174)))), ((int)(((byte)(174)))));
+            this.btn_New.FlatAppearance.BorderSize = 0;
+            this.btn_New.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_New.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_New.ForeColor = System.Drawing.Color.White;
+            this.btn_New.Image = global::FoodOrderingTask.Properties.Resources.icons8_add_folder_30;
+            this.btn_New.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_New.Location = new System.Drawing.Point(8, 22);
+            this.btn_New.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.btn_New.Name = "btn_New";
+            this.btn_New.Size = new System.Drawing.Size(172, 43);
+            this.btn_New.TabIndex = 127;
+            this.btn_New.TabStop = false;
+            this.btn_New.Text = "&New";
+            this.btn_New.UseVisualStyleBackColor = false;
+            this.btn_New.Click += new System.EventHandler(this.btn_New_Click);
+            // 
+            // txt_DataGridViewIndex
+            // 
+            this.txt_DataGridViewIndex.BackColor = System.Drawing.Color.White;
+            this.txt_DataGridViewIndex.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_DataGridViewIndex.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(99)))), ((int)(((byte)(99)))));
+            this.txt_DataGridViewIndex.Location = new System.Drawing.Point(23, 419);
+            this.txt_DataGridViewIndex.Name = "txt_DataGridViewIndex";
+            this.txt_DataGridViewIndex.Size = new System.Drawing.Size(14, 37);
+            this.txt_DataGridViewIndex.TabIndex = 1056;
+            this.txt_DataGridViewIndex.Visible = false;
+            // 
+            // btn_Upload
+            // 
+            this.btn_Upload.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(174)))), ((int)(((byte)(174)))));
+            this.btn_Upload.FlatAppearance.BorderSize = 0;
+            this.btn_Upload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Upload.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Upload.ForeColor = System.Drawing.Color.White;
+            this.btn_Upload.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Upload.Location = new System.Drawing.Point(534, 311);
+            this.btn_Upload.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.btn_Upload.Name = "btn_Upload";
+            this.btn_Upload.Size = new System.Drawing.Size(145, 43);
+            this.btn_Upload.TabIndex = 1057;
+            this.btn_Upload.TabStop = false;
+            this.btn_Upload.Text = "UPLOAD";
+            this.btn_Upload.UseVisualStyleBackColor = false;
+            this.btn_Upload.Click += new System.EventHandler(this.btn_Upload_Click);
+            // 
+            // pb_FoodImage
+            // 
+            this.pb_FoodImage.Image = global::FoodOrderingTask.Properties.Resources.icons8_food_100;
+            this.pb_FoodImage.Location = new System.Drawing.Point(534, 119);
+            this.pb_FoodImage.Name = "pb_FoodImage";
+            this.pb_FoodImage.Size = new System.Drawing.Size(147, 181);
+            this.pb_FoodImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pb_FoodImage.TabIndex = 132;
+            this.pb_FoodImage.TabStop = false;
+            // 
+            // btn_delete
+            // 
+            this.btn_delete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(174)))), ((int)(((byte)(174)))));
+            this.btn_delete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btn_delete.Enabled = false;
+            this.btn_delete.FlatAppearance.BorderSize = 0;
+            this.btn_delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_delete.ForeColor = System.Drawing.Color.White;
+            this.btn_delete.Image = global::FoodOrderingTask.Properties.Resources.icons8_delete_bin_30;
+            this.btn_delete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_delete.Location = new System.Drawing.Point(9, 131);
+            this.btn_delete.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.btn_delete.Name = "btn_delete";
+            this.btn_delete.Size = new System.Drawing.Size(172, 43);
+            this.btn_delete.TabIndex = 132;
+            this.btn_delete.TabStop = false;
+            this.btn_delete.Text = "  &Delete";
+            this.btn_delete.UseVisualStyleBackColor = false;
+            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click_1);
+            // 
             // frm_UpdateMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(889, 681);
+            this.Controls.Add(this.dgv_FoodList);
             this.Controls.Add(this.btn_Upload);
             this.Controls.Add(this.txt_DataGridViewIndex);
             this.Controls.Add(this.pb_FoodImage);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.dgv_FoodList);
             this.Controls.Add(this.rb_Western);
             this.Controls.Add(this.rb_Eastern);
             this.Controls.Add(this.rb_Asian);
@@ -510,5 +536,6 @@
         private System.Windows.Forms.DataGridViewImageColumn Image;
         private System.Windows.Forms.DataGridViewTextBoxColumn M_ChefAddress;
         private System.Windows.Forms.DataGridViewTextBoxColumn M_ChefName;
+        private System.Windows.Forms.Button btn_delete;
     }
 }

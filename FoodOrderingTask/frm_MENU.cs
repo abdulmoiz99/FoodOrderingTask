@@ -115,7 +115,7 @@ namespace FoodOrderingTask
                                                values(" + Main.UserID + ",'" + lab_Name.Text + "'," + float.Parse(lab_Price.Text) + ",'" + Type + "',0,'Placed','" + txt_ChefName.Text + "')");
                     MessageBox.Show("Item Successfully Added To Cart", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                catch (Exception ex) 
+                catch 
                 {
                     MessageBox.Show("Please Select an Item");
                 }

@@ -225,5 +225,81 @@ namespace FoodOrderingTask.DashBoard
 
             }
         }
+
+        private void dgv_FoodList_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //try
+            //{
+
+            int index = e.RowIndex;
+            if (index > -1)
+            {
+                txt_DataGridViewIndex.Text = index.ToString();
+                DataGridViewRow selectedrow = dgv_FoodList.Rows[index];
+                txt_DataGridViewIndex.Text = selectedrow.Cells["M_ID"].Value.ToString();
+                txt_ItemName.Text = selectedrow.Cells["M_Name"].Value.ToString();
+                txt_Price.Text = selectedrow.Cells["M_Price"].Value.ToString();
+                //  pb_FoodImage.Image =Convert.Tma selectedrow.Cells["M_Image"].Value.ToString();
+
+            }
+            index = 0;
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.Message);
+            //}
+            btn_delete.Enabled = true;
+        }
+
+        private void btn_delete_Click_1(object sender, EventArgs e)
+        {
+            if (txt_ItemName.Text.Length > 0 && txt_Price.Text.Length > 0)
+            {
+                DialogResult YesOrNo = MessageBox.Show("Are you sure To DELETE the current Record?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (YesOrNo == DialogResult.Yes)
+                {
+                    SQL.NonScalarQuery("DELETE from MENU where M_Name = '" + txt_ItemName.Text + "'");
+                    MessageBox.Show("Item Deleted Successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txt_ItemName.Text = "";
+                    txt_Price.Text = "";
+                    btn_delete.Enabled = false;
+                    Main.fillDgv(dgv_FoodList, "select M_ID,M_Name,M_Price,M_Type,M_Image,M_ChefAddress,M_ChefName from MEnu");
+                }
+            }
+            else 
+            {
+                MessageBox.Show("Please Select an Item First!", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+        }
+
+        private void dgv_FoodList_SelectionChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void dgv_FoodList_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            //try
+            //{
+
+            int index = e.RowIndex;
+            if (index > -1)
+            {
+                txt_DataGridViewIndex.Text = index.ToString();
+                DataGridViewRow selectedrow = dgv_FoodList.Rows[index];
+                txt_DataGridViewIndex.Text = selectedrow.Cells["M_ID"].Value.ToString();
+                txt_ItemName.Text = selectedrow.Cells["M_Name"].Value.ToString();
+                txt_Price.Text = selectedrow.Cells["M_Price"].Value.ToString();
+                //  pb_FoodImage.Image =Convert.Tma selectedrow.Cells["M_Image"].Value.ToString();
+
+            }
+            index = 0;
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.Message);
+            //}
+            btn_delete.Enabled = true;
+        }
     }
 }
