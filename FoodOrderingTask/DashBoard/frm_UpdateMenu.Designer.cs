@@ -62,6 +62,7 @@
             this.btn_Upload = new System.Windows.Forms.Button();
             this.pb_FoodImage = new System.Windows.Forms.PictureBox();
             this.btn_delete = new System.Windows.Forms.Button();
+            this.txt_EditName = new System.Windows.Forms.TextBox();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_FoodList)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -235,7 +236,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgv_FoodList.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgv_FoodList.Location = new System.Drawing.Point(23, 391);
+            this.dgv_FoodList.Location = new System.Drawing.Point(23, 393);
             this.dgv_FoodList.Name = "dgv_FoodList";
             this.dgv_FoodList.ReadOnly = true;
             this.dgv_FoodList.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
@@ -252,7 +253,7 @@
             this.dgv_FoodList.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgv_FoodList.RowTemplate.Height = 50;
             this.dgv_FoodList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_FoodList.Size = new System.Drawing.Size(844, 278);
+            this.dgv_FoodList.Size = new System.Drawing.Size(844, 276);
             this.dgv_FoodList.TabIndex = 1054;
             this.dgv_FoodList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_FoodList_CellClick);
             this.dgv_FoodList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_FoodList_CellContentClick);
@@ -468,6 +469,14 @@
             this.btn_delete.UseVisualStyleBackColor = false;
             this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click_1);
             // 
+            // txt_EditName
+            // 
+            this.txt_EditName.Location = new System.Drawing.Point(23, 393);
+            this.txt_EditName.Name = "txt_EditName";
+            this.txt_EditName.Size = new System.Drawing.Size(100, 20);
+            this.txt_EditName.TabIndex = 1058;
+            this.txt_EditName.Visible = false;
+            // 
             // frm_UpdateMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -475,6 +484,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(889, 681);
             this.Controls.Add(this.dgv_FoodList);
+            this.Controls.Add(this.txt_EditName);
             this.Controls.Add(this.btn_Upload);
             this.Controls.Add(this.txt_DataGridViewIndex);
             this.Controls.Add(this.pb_FoodImage);
@@ -537,5 +547,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn M_ChefAddress;
         private System.Windows.Forms.DataGridViewTextBoxColumn M_ChefName;
         private System.Windows.Forms.Button btn_delete;
+        private System.Windows.Forms.TextBox txt_EditName;
     }
 }
