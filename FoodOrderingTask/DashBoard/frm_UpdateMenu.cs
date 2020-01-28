@@ -197,6 +197,7 @@ namespace FoodOrderingTask.DashBoard
 
         private void frm_UpdateMenu_Activated(object sender, EventArgs e)
         {
+            rb_Western.Checked = true;
             Main.fillDgv(dgv_FoodList, "select M_ID,M_Name,M_Price,M_Type,M_Image,M_ChefAddress,M_ChefName from MEnu");
 
         }
@@ -318,6 +319,11 @@ namespace FoodOrderingTask.DashBoard
             //    MessageBox.Show(ex.Message);
             //}
             btn_delete.Enabled = true;
+        }
+
+        private void txt_ItemName_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

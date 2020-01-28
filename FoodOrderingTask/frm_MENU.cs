@@ -157,5 +157,10 @@ namespace FoodOrderingTask
                 MessageBox.Show(ex.Message, "Find Panel");
             }
         }
+
+        private void lab_Name1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

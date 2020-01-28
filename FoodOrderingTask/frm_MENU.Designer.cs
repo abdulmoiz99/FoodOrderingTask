@@ -29,18 +29,16 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_MENU));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.rb_Asian = new System.Windows.Forms.RadioButton();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.rb_Eastern = new System.Windows.Forms.RadioButton();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.rb_Western = new System.Windows.Forms.RadioButton();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
@@ -65,16 +63,16 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.btn_AddToCart = new System.Windows.Forms.Button();
             this.txt_ChefName = new System.Windows.Forms.TextBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_FoodList)).BeginInit();
             this.panel5.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -86,10 +84,10 @@
             this.panel2.Controls.Add(this.rb_Eastern);
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Controls.Add(this.rb_Western);
-            this.panel2.Location = new System.Drawing.Point(36, 15);
+            this.panel2.Location = new System.Drawing.Point(30, 543);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(514, 199);
+            this.panel2.Size = new System.Drawing.Size(514, 36);
             this.panel2.TabIndex = 17;
             // 
             // pictureBox1
@@ -140,16 +138,6 @@
             this.rb_Eastern.UseVisualStyleBackColor = true;
             this.rb_Eastern.CheckedChanged += new System.EventHandler(this.rb_Eastern_CheckedChanged);
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(37, 36);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(143, 142);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox2.TabIndex = 3;
-            this.pictureBox2.TabStop = false;
-            // 
             // rb_Western
             // 
             this.rb_Western.AutoSize = true;
@@ -165,22 +153,10 @@
             this.rb_Western.UseVisualStyleBackColor = true;
             this.rb_Western.CheckedChanged += new System.EventHandler(this.rb_Western_CheckedChanged);
             // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.panel4);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.txt_Find);
-            this.groupBox1.Location = new System.Drawing.Point(36, 219);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(514, 100);
-            this.groupBox1.TabIndex = 1020;
-            this.groupBox1.TabStop = false;
-            // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.DimGray;
-            this.panel4.Location = new System.Drawing.Point(21, 80);
+            this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.Location = new System.Drawing.Point(232, 81);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(356, 4);
             this.panel4.TabIndex = 1020;
@@ -189,8 +165,8 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.DimGray;
-            this.label1.Location = new System.Drawing.Point(18, 24);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(229, 25);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(99, 18);
             this.label1.TabIndex = 2;
@@ -203,7 +179,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(384, 40);
+            this.button2.Location = new System.Drawing.Point(609, 41);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(123, 39);
             this.button2.TabIndex = 1;
@@ -212,9 +188,11 @@
             // 
             // txt_Find
             // 
+            this.txt_Find.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(73)))), ((int)(((byte)(93)))));
             this.txt_Find.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_Find.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Find.Location = new System.Drawing.Point(21, 45);
+            this.txt_Find.ForeColor = System.Drawing.SystemColors.Window;
+            this.txt_Find.Location = new System.Drawing.Point(232, 46);
             this.txt_Find.Name = "txt_Find";
             this.txt_Find.Size = new System.Drawing.Size(356, 26);
             this.txt_Find.TabIndex = 0;
@@ -227,14 +205,14 @@
             this.dgv_FoodList.AllowUserToOrderColumns = true;
             this.dgv_FoodList.BackgroundColor = System.Drawing.Color.White;
             this.dgv_FoodList.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedVertical;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(99)))), ((int)(((byte)(99)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_FoodList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(99)))), ((int)(((byte)(99)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_FoodList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgv_FoodList.ColumnHeadersHeight = 50;
             this.dgv_FoodList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Image,
@@ -243,32 +221,32 @@
             this.M_Type,
             this.M_ChefAddress,
             this.M_ChefName});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_FoodList.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgv_FoodList.Location = new System.Drawing.Point(57, 334);
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_FoodList.DefaultCellStyle = dataGridViewCellStyle6;
+            this.dgv_FoodList.Location = new System.Drawing.Point(30, 35);
             this.dgv_FoodList.Name = "dgv_FoodList";
             this.dgv_FoodList.ReadOnly = true;
             this.dgv_FoodList.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_FoodList.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_FoodList.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dgv_FoodList.RowHeadersWidth = 10;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.dgv_FoodList.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
+            this.dgv_FoodList.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.dgv_FoodList.RowTemplate.Height = 50;
             this.dgv_FoodList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_FoodList.Size = new System.Drawing.Size(828, 270);
+            this.dgv_FoodList.Size = new System.Drawing.Size(860, 493);
             this.dgv_FoodList.TabIndex = 1021;
             this.dgv_FoodList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_FoodList_CellClick);
             this.dgv_FoodList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_FoodList_CellContentClick);
@@ -330,9 +308,9 @@
             this.panel5.Controls.Add(this.panel6);
             this.panel5.Controls.Add(this.lab_Name);
             this.panel5.Controls.Add(this.lab_Name1);
-            this.panel5.Location = new System.Drawing.Point(555, 66);
+            this.panel5.Location = new System.Drawing.Point(924, 201);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(330, 148);
+            this.panel5.Size = new System.Drawing.Size(330, 308);
             this.panel5.TabIndex = 1025;
             // 
             // lab_Price
@@ -390,12 +368,13 @@
             this.lab_Name1.TabIndex = 1023;
             this.lab_Name1.Text = "Name ";
             this.lab_Name1.Visible = false;
+            this.lab_Name1.Click += new System.EventHandler(this.lab_Name1_Click);
             // 
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(73)))), ((int)(((byte)(93)))));
             this.panel7.Controls.Add(this.label2);
-            this.panel7.Location = new System.Drawing.Point(554, 3);
+            this.panel7.Location = new System.Drawing.Point(923, 130);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(331, 65);
             this.panel7.TabIndex = 1024;
@@ -414,11 +393,15 @@
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(73)))), ((int)(((byte)(93)))));
+            this.panel8.Controls.Add(this.panel4);
             this.panel8.Controls.Add(this.label5);
+            this.panel8.Controls.Add(this.label1);
+            this.panel8.Controls.Add(this.button2);
+            this.panel8.Controls.Add(this.txt_Find);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel8.Location = new System.Drawing.Point(0, 0);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(984, 82);
+            this.panel8.Size = new System.Drawing.Size(1266, 104);
             this.panel8.TabIndex = 1027;
             // 
             // label5
@@ -426,7 +409,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(39, 9);
+            this.label5.Location = new System.Drawing.Point(39, 25);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(159, 56);
             this.label5.TabIndex = 1022;
@@ -434,17 +417,12 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.btn_AddToCart);
-            this.panel3.Controls.Add(this.txt_ChefName);
             this.panel3.Controls.Add(this.dgv_FoodList);
-            this.panel3.Controls.Add(this.panel5);
             this.panel3.Controls.Add(this.panel2);
-            this.panel3.Controls.Add(this.groupBox1);
-            this.panel3.Controls.Add(this.panel7);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel3.Location = new System.Drawing.Point(0, 82);
+            this.panel3.Location = new System.Drawing.Point(0, 104);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(964, 633);
+            this.panel3.Size = new System.Drawing.Size(890, 611);
             this.panel3.TabIndex = 1029;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
@@ -457,7 +435,7 @@
             this.btn_AddToCart.ForeColor = System.Drawing.Color.White;
             this.btn_AddToCart.Image = ((System.Drawing.Image)(resources.GetObject("btn_AddToCart.Image")));
             this.btn_AddToCart.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_AddToCart.Location = new System.Drawing.Point(556, 243);
+            this.btn_AddToCart.Location = new System.Drawing.Point(925, 515);
             this.btn_AddToCart.Name = "btn_AddToCart";
             this.btn_AddToCart.Size = new System.Drawing.Size(329, 60);
             this.btn_AddToCart.TabIndex = 1026;
@@ -467,19 +445,33 @@
             // 
             // txt_ChefName
             // 
-            this.txt_ChefName.Location = new System.Drawing.Point(785, 259);
+            this.txt_ChefName.Location = new System.Drawing.Point(1025, 406);
             this.txt_ChefName.Name = "txt_ChefName";
             this.txt_ChefName.Size = new System.Drawing.Size(100, 20);
             this.txt_ChefName.TabIndex = 1027;
             this.txt_ChefName.Visible = false;
             this.txt_ChefName.TextChanged += new System.EventHandler(this.txt_ChefName_TextChanged);
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(37, 36);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(143, 142);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox2.TabIndex = 3;
+            this.pictureBox2.TabStop = false;
+            // 
             // frm_MENU
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(984, 715);
+            this.ClientSize = new System.Drawing.Size(1266, 715);
+            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.txt_ChefName);
+            this.Controls.Add(this.panel7);
+            this.Controls.Add(this.btn_AddToCart);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel8);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -491,9 +483,6 @@
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_FoodList)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
@@ -502,20 +491,19 @@
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
             this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.RadioButton rb_Eastern;
         private System.Windows.Forms.RadioButton rb_Western;
         private System.Windows.Forms.RadioButton rb_Asian;
-        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button2;
@@ -540,5 +528,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn M_ChefAddress;
         private System.Windows.Forms.DataGridViewTextBoxColumn M_ChefName;
         private System.Windows.Forms.TextBox txt_ChefName;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
